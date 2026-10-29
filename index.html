@@ -111,6 +111,33 @@ nav .navwa{background:var(--wine);color:#fff;border-radius:99px;margin-left:6px}
 .it .p{font-weight:700;color:var(--wine);white-space:nowrap;font-size:.92rem}
 .it .d{font-size:.78rem;color:#7a6354;font-style:italic;margin-top:1px}
 .aviso{text-align:center;font-size:.8rem;color:#7a6354;margin-top:18px}
+.rese{background:var(--soft);padding:64px 0 56px;margin-top:40px;text-align:center}
+.rese .eyebrow{display:block;font-family:Sacramento,cursive;font-size:2.2rem;line-height:1;color:var(--gold);margin-bottom:4px}
+.res-head{display:flex;flex-direction:column;align-items:center;gap:14px;margin-bottom:26px}
+.res-head .sec-title{margin-bottom:0}
+.res-nota{display:flex;align-items:center;justify-content:center;gap:16px;text-align:left}
+.res-nota[hidden]{display:none}
+.res-nota .num{font-weight:700;font-size:4rem;line-height:1;color:var(--brown)}
+.estrellas{background:linear-gradient(100deg,#e0a43a 0%,#f7d27a 45%,#e0a43a 90%);background-size:220% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:#e0a43a;letter-spacing:2px;line-height:1;animation:brillo 4.5s ease-in-out infinite}
+@keyframes brillo{0%,100%{background-position:100% 0}50%{background-position:0 0}}
+.res-nota .estrellas{font-size:1.3rem}
+.res-nota small{display:block;color:#7a6354;font-size:.95rem;margin-top:4px}
+.tags{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-bottom:30px}
+.tags span{background:#fff;border:2px solid var(--gold);color:var(--wine);font-weight:700;font-size:.88rem;border-radius:99px;padding:5px 14px}
+.res-lista{display:grid;grid-template-columns:repeat(6,1fr);gap:20px;text-align:center}
+.res{position:relative;grid-column:span 2;background:#fff;border:2px solid var(--brown);border-radius:var(--r);padding:24px;display:flex;flex-direction:column;gap:14px;transition:transform .25s,box-shadow .25s}
+.res:nth-child(n+4){grid-column:span 3}
+.res:nth-child(even){border-color:var(--wine)}
+.res:hover{transform:translateY(-4px);box-shadow:0 14px 28px rgba(58,36,26,.16)}
+.res::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .3s;background:radial-gradient(260px circle at var(--mx,50%) var(--my,50%),rgba(201,143,90,.28),transparent 65%)}
+.res.glow:hover::before,.res.glow.toca::before{opacity:1}
+.res .estrellas{font-size:1.1rem}
+.res blockquote{flex:1;font-size:.95rem;line-height:1.6}
+.res figcaption{display:flex;flex-direction:column;align-items:center;border-top:1px dashed #cfc0a6;padding-top:12px;font-size:.95rem}
+.res figcaption b{color:var(--brown);font-size:1rem}
+.res figcaption span{color:#7a6354;font-size:.85rem}
+.hint{display:none;font-size:.85rem;color:#7a6354;margin-top:4px}
+.res-botones{margin-top:30px}
 .visit{padding:40px 0 70px}
 .vpanel{background:var(--brown-x);color:#fff;border-radius:36px;padding:56px 28px;text-align:center}
 .vpanel .te{color:#f1c48f;font-size:2.4rem;line-height:1;display:block}
@@ -149,8 +176,10 @@ footer .wrap{display:flex;flex-direction:column;align-items:center;gap:14px}
 @keyframes flecha{0%,100%{transform:none;opacity:1}45%{transform:translateY(-14px);opacity:0}46%{transform:translateY(14px);opacity:0}}
 @keyframes flechaYa{to{transform:translateY(-34px);opacity:0}}
 .js .rv{opacity:0;transform:translateY(20px);transition:opacity .7s,transform .7s}.js .rv.in{opacity:1;transform:none}
-.js .card.rv.in:hover{transform:translateY(-5px)}
+.js .card.rv.in:hover,.js .res.rv.in:hover{transform:translateY(-5px)}
+.js .res.rv{transition:opacity .7s,transform .25s,box-shadow .25s}
 @media(max-width:860px){.datos ul{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:860px) and (min-width:761px){.res,.res:nth-child(n+4){grid-column:span 3}.res:last-child:nth-child(odd){grid-column:span 6}}
 @media(max-width:760px){
  body{font-size:16px}.wrap{padding:0 18px}
  header.top .wrap{flex-direction:column;gap:0;padding-top:8px;padding-bottom:0}
@@ -168,6 +197,13 @@ footer .wrap{display:flex;flex-direction:column;align-items:center;gap:14px}
  .cards{grid-template-columns:1fr}.about{padding-top:56px}
  #menu{padding:4px 16px 26px;border-radius:22px}
  .list{grid-template-columns:1fr}
+ .res-lista{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;margin:0 -18px;padding:6px 18px 14px;scroll-padding:0 18px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+ .res-lista::-webkit-scrollbar{display:none}
+ .res,.res:nth-child(n+4){flex:0 0 84%;grid-column:auto;scroll-snap-align:start;padding:20px}
+ .hint{display:block}
+ .res-botones{margin-top:14px}
+ .res-nota .num{font-size:3.2rem}
+ .rese{padding:48px 0 40px}
  .vcols{grid-template-columns:1fr}.vpanel{padding:44px 18px;border-radius:28px}
  .vb a{width:100%;text-align:center}
  iframe{height:270px}footer{padding-bottom:96px}.subir{right:18px}
@@ -181,7 +217,7 @@ footer .wrap{display:flex;flex-direction:column;align-items:center;gap:14px}
 <header class="top"><div class="wrap">
  <a href="#top" class="brand script" aria-label="Alfonsina y el Mar, inicio"><img src="logo.png" alt="" width="40" height="40">Alfonsina y el Mar</a>
  <nav aria-label="Principal">
-  <a href="#nosotros">Nosotros</a><a href="#carta">Carta</a><a href="#visitanos">Visitanos</a>
+  <a href="#nosotros">Nosotros</a><a href="#carta">Carta</a><a href="#resenas">Reseñas</a><a href="#visitanos">Visitanos</a>
   <a class="navwa" id="navwa" target="_blank" rel="noopener" style="display:none">Escribinos</a>
  </nav>
 </div></header>
@@ -237,6 +273,23 @@ footer .wrap{display:flex;flex-direction:column;align-items:center;gap:14px}
   <p class="aviso">Los precios pueden cambiar sin previo aviso.</p>
  </div>
 </section>
+
+<section class="rese" id="resenas"><div class="wrap">
+ <div class="res-head">
+  <div><span class="eyebrow rv">Opinan los que vinieron</span><h2 class="sec-title rv">Lo que dicen de nosotros</h2></div>
+  <div class="res-nota rv" id="resnota" hidden><span class="num" id="resnum"></span><div><div class="estrellas" role="img" aria-label="Puntaje en Google">★★★★★</div><small id="rescant"></small></div></div>
+ </div>
+ <div class="tags rv" aria-label="Lo que más destacan los clientes"><span>Atención amable</span><span>Ambiente cálido</span><span>Libros para leer o llevar</span><span>Opciones sin TACC</span></div>
+ <div class="res-lista">
+  <figure class="res rv"><div class="estrellas" role="img" aria-label="5 de 5 estrellas">★★★★★</div><blockquote><p>Se nota que todo está hecho con mucho amor y dedicación. El ambiente es hermoso y las personas que lo atienden también. Muy rico todo.</p></blockquote><figcaption><b>Einat Irigaray</b><span>Reseña en Google</span></figcaption></figure>
+  <figure class="res rv"><div class="estrellas" role="img" aria-label="5 de 5 estrellas">★★★★★</div><blockquote><p>Espectacular. La atención, la decoración y los productos ofrecidos. Imperdibles el carrot cake y el latte. Único en Mataderos.</p></blockquote><figcaption><b>maria laura budetta</b><span>Reseña en Google</span></figcaption></figure>
+  <figure class="res rv"><div class="estrellas" role="img" aria-label="5 de 5 estrellas">★★★★★</div><blockquote><p>El lugar es bellísimo y me contaron que tenés la opción de llevarte un libro a tu casa y devolverlo como en una biblioteca, lo que me pareció una muy linda idea. Las cookies muy ricas. Voy a volver 🙌🏽</p></blockquote><figcaption><b>Romina Eva Del Valle Gonzalez</b><span>Reseña en Google</span></figcaption></figure>
+  <figure class="res rv"><div class="estrellas" role="img" aria-label="5 de 5 estrellas">★★★★★</div><blockquote><p>Hermoso y cálido lugar. La atención increíble, todo riquísimo y accesible. Libros variados, hermoso para compartir momentos de lectura.</p></blockquote><figcaption><b>Paola Spina</b><span>Reseña en Google</span></figcaption></figure>
+  <figure class="res rv"><div class="estrellas" role="img" aria-label="5 de 5 estrellas">★★★★★</div><blockquote><p>Excelente atención, excelente lugar, excelente café, excelente pastelería.</p></blockquote><figcaption><b>Mariano Blasco</b><span>Local Guide</span></figcaption></figure>
+ </div>
+ <p class="hint">Deslizá para ver más →</p>
+ <p class="res-botones"><a class="btn alt" id="revBtn" target="_blank" rel="noopener">Ver todas las reseñas en Google</a></p>
+</div></section>
 
 <section class="visit" id="visitanos"><div class="wrap"><div class="vpanel">
  <span class="script te">Te esperamos</span>
@@ -299,6 +352,11 @@ $("mapBtn").href=mp;
 var g=$("fig");g.href="https://instagram.com/"+INFO.instagram;g.textContent="@"+INFO.instagram;var b=$("igBtn");b.href=g.href;b.style.display="inline-flex";
 if(INFO.whatsapp){var u="https://wa.me/"+INFO.whatsapp+"?text="+encodeURIComponent("Hola! Quiero hacer una consulta");$("wa").href=u;$("wa").style.display="flex";$("navwa").href=u;$("navwa").style.display="inline-flex"}
 
+// Reseñas: nota general (✏️ completá con lo que muestra Google, ej "4,9" y "103". Vacío = no se muestra)
+var NOTA="",CANT="";
+if(NOTA){$("resnum").textContent=NOTA;$("rescant").textContent=CANT?CANT+" reseñas en Google":"Reseñas en Google";$("resnota").hidden=false}
+$("revBtn").href=mp;
+
 // Estado abierto / cerrado en vivo
 function dur(n){var a=Math.floor(n/60),m=n%60;return a?a+" h"+(m?" "+m+" min":""):m+" min"}
 function estado(){try{
@@ -320,6 +378,11 @@ function onScroll(){var y=window.pageYOffset||root.scrollTop,hh=root.scrollHeigh
  if(foto&&!reduce&&y<900)foto.style.setProperty("--py",(-y*.06).toFixed(1)+"px");tick=false}
 window.addEventListener("scroll",function(){if(!tick){tick=true;requestAnimationFrame(onScroll)}},{passive:true});onScroll();
 sub.addEventListener("click",function(){sub.classList.add("va");setTimeout(function(){sub.classList.remove("va")},650);window.scrollTo({top:0,behavior:reduce?"auto":"smooth"})});
+
+// Reseñas: luz que sigue el cursor + contador de la nota
+[].slice.call(document.querySelectorAll(".res")).forEach(function(c){c.classList.add("glow");function mv(e){var r=c.getBoundingClientRect();c.style.setProperty("--mx",(e.clientX-r.left)+"px");c.style.setProperty("--my",(e.clientY-r.top)+"px")}c.addEventListener("pointermove",mv,{passive:true});c.addEventListener("pointerdown",function(e){mv(e);c.classList.add("toca")},{passive:true});["pointerup","pointercancel","pointerleave"].forEach(function(n){c.addEventListener(n,function(){c.classList.remove("toca")},{passive:true})})});
+var nn=$("resnum");
+if(NOTA&&nn&&"IntersectionObserver" in window&&!reduce){var fin=parseFloat(String(NOTA).replace(",","."));if(fin>0){var cio=new IntersectionObserver(function(en){if(!en[0].isIntersecting)return;cio.disconnect();var t0=null;function paso(t){if(!t0)t0=t;var k=Math.min(1,(t-t0)/1400),v=fin*(1-Math.pow(1-k,3));nn.textContent=v.toFixed(1).replace(".",",");if(k<1)requestAnimationFrame(paso)}requestAnimationFrame(paso)},{threshold:.6});nn.textContent="0,0";cio.observe(nn)}}
 
 // Reveal + sección activa en el menú
 var rv=document.querySelectorAll(".rv");
