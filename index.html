@@ -11,7 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 /* ✏️ Paleta: cambiá estos colores para adaptarla a la marca */
-:root{--crema:#f6ead3;--leche:#fff8ea;--esp:#2b1a14;--car:#d98e3f;--pist:#aebf8a;--tomate:#b3472f;--bg:var(--crema);--fg:#2b1a14;--mut:#7a5f50;--card:#fff8ea;--dot:rgba(43,26,20,.1);--disp:"Bricolage Grotesque",system-ui,sans-serif;--sans:"DM Sans",system-ui,sans-serif;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root{--crema:#f6ead3;--leche:#fff8ea;--esp:#5e3d2d;--car2:#f2b777;--car:#d98e3f;--pist:#aebf8a;--tomate:#b3472f;--bg:var(--crema);--fg:#2b1a14;--mut:#7a5f50;--card:#fff8ea;--dot:rgba(43,26,20,.1);--disp:"Bricolage Grotesque",system-ui,sans-serif;--sans:"DM Sans",system-ui,sans-serif;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 @media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1d110c;--fg:#f6ead3;--mut:#c4a995;--card:#2b1a14;--dot:rgba(246,234,211,.08)}}
 :root[data-theme="dark"]{--bg:#1d110c;--fg:#f6ead3;--mut:#c4a995;--card:#2b1a14;--dot:rgba(246,234,211,.08)}
 html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px));height:100%;-webkit-text-size-adjust:100%}
@@ -39,7 +39,7 @@ nav a:hover,nav a.act{background:var(--car);color:#2b1a14}
 .estado{display:inline-flex;align-items:center;gap:9px;background:var(--card);border:2px solid var(--esp);border-radius:99px;padding:7px 16px;font-size:.86rem;font-weight:600;margin-bottom:22px}
 .estado i{width:10px;height:10px;border-radius:50%;background:#3fae72;flex:none}
 .estado.pronto i{background:var(--car)}.estado.cerrado i{background:var(--tomate)}
-.hero h1{font-weight:800;font-size:clamp(3.4rem,10vw,7.4rem);letter-spacing:-.045em;line-height:.88}
+.hero h1{font-weight:700;font-size:clamp(3.4rem,10vw,7.4rem);letter-spacing:-.045em;line-height:.88}
 .hero h1 em{font-style:normal;color:var(--tomate);display:block;transform:rotate(-2deg);transform-origin:left}
 .lead{max-width:430px;margin:24px 0 28px;font-size:1.12rem;color:var(--mut)}
 .escena{position:relative;max-width:440px;justify-self:center;width:100%}
@@ -56,7 +56,7 @@ nav a:hover,nav a.act{background:var(--car);color:#2b1a14}
 .datos{background:var(--esp);color:var(--crema);padding:6px 0 34px}
 .datos .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
 .datos div{padding:18px 22px;border-left:2px dashed rgba(246,234,211,.3)}.datos div:first-child{border:0;padding-left:0}
-.datos small{display:block;color:var(--car);font-weight:600;font-size:.82rem;margin-bottom:2px}
+.datos small{display:block;color:var(--car2);font-weight:600;font-size:.82rem;margin-bottom:2px}
 .datos b{font-weight:600;line-height:1.35;display:block}
 .about{padding:84px 0 20px}
 .about h2{font-weight:800;font-size:clamp(2rem,5vw,3.4rem);letter-spacing:-.03em;max-width:780px;margin-bottom:34px}
@@ -94,7 +94,7 @@ nav a:hover,nav a.act{background:var(--car);color:#2b1a14}
 .board h2{font-weight:800;font-size:clamp(2.4rem,6vw,3.8rem);letter-spacing:-.035em}
 .board .sub{margin:8px 0 24px;color:#d6c0a6}
 .tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:26px}
-.tabs button{font:inherit;font-weight:600;font-size:.9rem;min-height:46px;padding:9px 18px;border-radius:99px;border:2px solid #6b4a3a;background:transparent;color:var(--crema);cursor:pointer;transition:background .2s,color .2s,transform .15s}
+.tabs button{font:inherit;font-weight:600;font-size:.9rem;min-height:46px;padding:9px 18px;border-radius:99px;border:2px solid #9a7360;background:transparent;color:var(--crema);cursor:pointer;transition:background .2s,color .2s,transform .15s}
 .tabs button:hover{border-color:var(--car)}
 .tabs button:active{transform:scale(.95)}
 .tabs button[aria-pressed="true"]{background:var(--car);border-color:var(--car);color:#2b1a14}
@@ -107,8 +107,8 @@ nav a:hover,nav a.act{background:var(--car);color:#2b1a14}
 .it:hover{background:rgba(246,234,211,.08)}
 .it .row{display:flex;align-items:baseline;gap:10px}
 .it .n{font-weight:600}
-.it .dots{flex:1;min-width:14px;border-bottom:2px dotted #8a6a58;transform:translateY(-4px)}
-.it .p{font-family:var(--disp);font-weight:700;color:var(--car);white-space:nowrap;font-size:1.05rem}
+.it .dots{flex:1;min-width:14px;border-bottom:2px dotted #b08e7a;transform:translateY(-4px)}
+.it .p{font-family:var(--disp);font-weight:700;color:var(--car2);white-space:nowrap;font-size:1.05rem}
 .it .d{font-size:.84rem;color:#cdb79f;margin-top:2px}
 .aviso{margin:20px 0 0;color:#cdb79f;font-size:.84rem}
 .rese{padding:90px 0 20px}
@@ -137,7 +137,7 @@ nav a:hover,nav a.act{background:var(--car);color:#2b1a14}
 .vp .estado{margin-bottom:16px;color:#2b1a14}
 footer{background:var(--esp);color:var(--crema);padding:28px 0 calc(28px + env(safe-area-inset-bottom,0px));font-size:.88rem}
 footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px 24px}
-footer a{color:var(--car);font-weight:600}
+footer a{color:var(--car2);font-weight:600}
 .js .rv{opacity:0;transform:translateY(24px);transition:opacity .6s,transform .6s}
 .js .rv.in{opacity:1;transform:none}
 @media(max-width:820px){
@@ -167,10 +167,10 @@ nav a{padding:9px 8px;font-size:.82rem}
 
 <main>
 <section class="hero" id="top">
- <svg class="grano g1" viewBox="0 0 40 56" aria-hidden="true"><ellipse cx="20" cy="28" rx="17" ry="25" fill="#6b3b22" stroke="#2b1a14" stroke-width="3"/><path d="M20 4C8 22 32 34 20 52" fill="none" stroke="#2b1a14" stroke-width="3"/></svg>
- <svg class="grano g2" viewBox="0 0 40 56" aria-hidden="true"><ellipse cx="20" cy="28" rx="17" ry="25" fill="#6b3b22" stroke="#2b1a14" stroke-width="3"/><path d="M20 4C8 22 32 34 20 52" fill="none" stroke="#2b1a14" stroke-width="3"/></svg>
- <svg class="grano g3" viewBox="0 0 40 56" aria-hidden="true"><ellipse cx="20" cy="28" rx="17" ry="25" fill="#6b3b22" stroke="#2b1a14" stroke-width="3"/><path d="M20 4C8 22 32 34 20 52" fill="none" stroke="#2b1a14" stroke-width="3"/></svg>
- <svg class="grano g4" viewBox="0 0 40 56" aria-hidden="true"><ellipse cx="20" cy="28" rx="17" ry="25" fill="#6b3b22" stroke="#2b1a14" stroke-width="3"/><path d="M20 4C8 22 32 34 20 52" fill="none" stroke="#2b1a14" stroke-width="3"/></svg>
+ <svg class="grano g1" viewBox="0 0 40 56" aria-hidden="true"><ellipse cx="20" cy="28" rx="17" ry="25" fill="#6b3b22" stroke="#5e3d2d" stroke-width="3"/><path d="M20 4C8 22 32 34 20 52" fill="none" stroke="#5e3d2d" stroke-width="3"/></svg>
+ <svg class="grano g2" viewBox="0 0 40 56" aria-hidden="true"><ellipse cx="20" cy="28" rx="17" ry="25" fill="#6b3b22" stroke="#5e3d2d" stroke-width="3"/><path d="M20 4C8 22 32 34 20 52" fill="none" stroke="#5e3d2d" stroke-width="3"/></svg>
+ <svg class="grano g3" viewBox="0 0 40 56" aria-hidden="true"><ellipse cx="20" cy="28" rx="17" ry="25" fill="#6b3b22" stroke="#5e3d2d" stroke-width="3"/><path d="M20 4C8 22 32 34 20 52" fill="none" stroke="#5e3d2d" stroke-width="3"/></svg>
+ <svg class="grano g4" viewBox="0 0 40 56" aria-hidden="true"><ellipse cx="20" cy="28" rx="17" ry="25" fill="#6b3b22" stroke="#5e3d2d" stroke-width="3"/><path d="M20 4C8 22 32 34 20 52" fill="none" stroke="#5e3d2d" stroke-width="3"/></svg>
  <div class="wrap">
   <div>
    <div class="estado" id="estado"><i></i><span id="estado-txt">Café y libros en Murguiondo 1659</span></div>
@@ -180,14 +180,14 @@ nav a{padding:9px 8px;font-size:.82rem}
   </div>
   <div class="escena">
    <svg viewBox="0 0 360 340" role="img" aria-label="Taza de café con leche con un corazón en la espuma, junto a una pila de libros">
-    <circle cx="180" cy="170" r="158" fill="#d98e3f" stroke="#2b1a14" stroke-width="5"/>
+    <circle cx="180" cy="170" r="158" fill="#d98e3f" stroke="#5e3d2d" stroke-width="5"/>
     <path class="vapor" d="M140 100C127 83 153 73 141 51"/><path class="vapor" d="M176 93C163 75 189 65 177 41"/><path class="vapor" d="M212 100C199 83 225 73 213 51"/>
-    <rect x="60" y="262" width="240" height="30" rx="5" fill="#b3472f" stroke="#2b1a14" stroke-width="5"/><path d="M80 277h60" stroke="#fff8ea" stroke-width="4" stroke-linecap="round"/>
-    <rect x="80" y="234" width="210" height="28" rx="5" fill="#aebf8a" stroke="#2b1a14" stroke-width="5"/><path d="M100 248h40" stroke="#2b1a14" stroke-width="4" stroke-linecap="round"/>
-    <ellipse cx="176" cy="234" rx="100" ry="14" fill="#fff8ea" stroke="#2b1a14" stroke-width="5"/>
-    <path d="M248 160C298 152 298 214 244 214" fill="none" stroke="#2b1a14" stroke-width="18" stroke-linecap="round"/><path d="M248 160C298 152 298 214 244 214" fill="none" stroke="#fff8ea" stroke-width="7" stroke-linecap="round"/>
-    <path d="M92 136H260V176C260 218 228 236 176 236C124 236 92 218 92 176Z" fill="#fff8ea" stroke="#2b1a14" stroke-width="5"/>
-    <ellipse cx="176" cy="136" rx="84" ry="20" fill="#fff8ea" stroke="#2b1a14" stroke-width="5"/>
+    <rect x="60" y="262" width="240" height="30" rx="5" fill="#b3472f" stroke="#5e3d2d" stroke-width="5"/><path d="M80 277h60" stroke="#fff8ea" stroke-width="4" stroke-linecap="round"/>
+    <rect x="80" y="234" width="210" height="28" rx="5" fill="#aebf8a" stroke="#5e3d2d" stroke-width="5"/><path d="M100 248h40" stroke="#5e3d2d" stroke-width="4" stroke-linecap="round"/>
+    <ellipse cx="176" cy="234" rx="100" ry="14" fill="#fff8ea" stroke="#5e3d2d" stroke-width="5"/>
+    <path d="M248 160C298 152 298 214 244 214" fill="none" stroke="#5e3d2d" stroke-width="18" stroke-linecap="round"/><path d="M248 160C298 152 298 214 244 214" fill="none" stroke="#fff8ea" stroke-width="7" stroke-linecap="round"/>
+    <path d="M92 136H260V176C260 218 228 236 176 236C124 236 92 218 92 176Z" fill="#fff8ea" stroke="#5e3d2d" stroke-width="5"/>
+    <ellipse cx="176" cy="136" rx="84" ry="20" fill="#fff8ea" stroke="#5e3d2d" stroke-width="5"/>
     <ellipse cx="176" cy="138" rx="71" ry="14" fill="#6b3b22"/>
     <path d="M176 148C152 134 157 122 168 124C173 125 176 129 176 129C176 129 179 125 184 124C195 122 200 134 176 148Z" fill="#fff8ea"/>
    </svg>
@@ -217,13 +217,13 @@ nav a{padding:9px 8px;font-size:.82rem}
  <h2 class="rv">Para probar</h2>
  <div class="tiles">
   <div class="tile rv">
-   <svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="42" fill="#e9c9a0" stroke="#2b1a14" stroke-width="4"/><circle cx="34" cy="36" r="6" fill="#4a2a1a"/><circle cx="62" cy="32" r="5" fill="#4a2a1a"/><circle cx="70" cy="58" r="6" fill="#4a2a1a"/><circle cx="42" cy="64" r="5" fill="#4a2a1a"/><circle cx="52" cy="48" r="4" fill="#4a2a1a"/><circle cx="26" cy="56" r="4" fill="#4a2a1a"/></svg>
+   <svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="42" fill="#e9c9a0" stroke="#5e3d2d" stroke-width="4"/><circle cx="34" cy="36" r="6" fill="#4a2a1a"/><circle cx="62" cy="32" r="5" fill="#4a2a1a"/><circle cx="70" cy="58" r="6" fill="#4a2a1a"/><circle cx="42" cy="64" r="5" fill="#4a2a1a"/><circle cx="52" cy="48" r="4" fill="#4a2a1a"/><circle cx="26" cy="56" r="4" fill="#4a2a1a"/></svg>
    <h3>Cookie cup</h3><p>Una cookie en formato taza para acompañar tu café.</p><b>$7.000</b></div>
   <div class="tile rv">
-   <svg viewBox="0 0 100 100" aria-hidden="true"><path d="M26 18h48l-6 70a6 6 0 0 1-6 5H38a6 6 0 0 1-6-5Z" fill="#fff8ea" stroke="#2b1a14" stroke-width="4" stroke-linejoin="round"/><path d="M29 50h42l-3 38a6 6 0 0 1-6 5H38a6 6 0 0 1-6-5Z" fill="#d98e3f"/><path d="M30 46h40" stroke="#2b1a14" stroke-width="3"/><path d="M58 4 L52 52" stroke="#2b1a14" stroke-width="5" stroke-linecap="round"/><path d="M26 18h48l-6 70a6 6 0 0 1-6 5H38a6 6 0 0 1-6-5Z" fill="none" stroke="#2b1a14" stroke-width="4" stroke-linejoin="round"/></svg>
+   <svg viewBox="0 0 100 100" aria-hidden="true"><path d="M26 18h48l-6 70a6 6 0 0 1-6 5H38a6 6 0 0 1-6-5Z" fill="#fff8ea" stroke="#5e3d2d" stroke-width="4" stroke-linejoin="round"/><path d="M29 50h42l-3 38a6 6 0 0 1-6 5H38a6 6 0 0 1-6-5Z" fill="#d98e3f"/><path d="M30 46h40" stroke="#5e3d2d" stroke-width="3"/><path d="M58 4 L52 52" stroke="#5e3d2d" stroke-width="5" stroke-linecap="round"/><path d="M26 18h48l-6 70a6 6 0 0 1-6 5H38a6 6 0 0 1-6-5Z" fill="none" stroke="#5e3d2d" stroke-width="4" stroke-linejoin="round"/></svg>
    <h3>Latte saborizado</h3><p>Frío o caliente, con pistacho, dulce de leche, vainilla, caramelo o chocolate.</p><b>$8.500</b></div>
   <div class="tile rv">
-   <svg viewBox="0 0 100 100" aria-hidden="true"><path d="M20 38a18 18 0 0 1 12-17 18 18 0 0 1 36 0 18 18 0 0 1 12 17v42a8 8 0 0 1-8 8H28a8 8 0 0 1-8-8Z" fill="#f0c98a" stroke="#2b1a14" stroke-width="4" stroke-linejoin="round"/><rect x="32" y="44" width="36" height="30" rx="8" fill="#aebf8a" stroke="#2b1a14" stroke-width="3"/><circle cx="50" cy="59" r="5" fill="#fff8ea"/></svg>
+   <svg viewBox="0 0 100 100" aria-hidden="true"><path d="M20 38a18 18 0 0 1 12-17 18 18 0 0 1 36 0 18 18 0 0 1 12 17v42a8 8 0 0 1-8 8H28a8 8 0 0 1-8-8Z" fill="#f0c98a" stroke="#5e3d2d" stroke-width="4" stroke-linejoin="round"/><rect x="32" y="44" width="36" height="30" rx="8" fill="#aebf8a" stroke="#5e3d2d" stroke-width="3"/><circle cx="50" cy="59" r="5" fill="#fff8ea"/></svg>
    <h3>Tostadas</h3><p>Con dos dips a elección: manteca, queso crema, mermelada, dulce de leche o palta.</p><b>$7.500</b></div>
  </div>
 </div></section>
