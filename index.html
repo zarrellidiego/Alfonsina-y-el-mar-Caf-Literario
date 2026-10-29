@@ -111,17 +111,6 @@ nav .navwa{background:var(--wine);color:#fff;border-radius:99px;margin-left:6px}
 .it .p{font-weight:700;color:var(--wine);white-space:nowrap;font-size:.92rem}
 .it .d{font-size:.78rem;color:#7a6354;font-style:italic;margin-top:1px}
 .aviso{text-align:center;font-size:.8rem;color:#7a6354;margin-top:18px}
-.rese{padding:56px 0 8px}
-.rcarr{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 22px 20px;scrollbar-width:none;max-width:1040px;margin:0 auto}
-.rcarr::-webkit-scrollbar{display:none}
-.rcard{flex:none;width:min(320px,82vw);scroll-snap-align:center;display:flex;flex-direction:column;gap:14px;background:var(--soft);border:1px solid var(--line);border-top:4px solid var(--gold);border-radius:var(--r);padding:22px;transition:transform .25s,box-shadow .25s}
-.rcard:nth-child(even){border-top-color:var(--wine)}
-.rcard:hover{transform:translateY(-5px);box-shadow:0 14px 30px rgba(58,36,26,.18)}
-.rcard q{quotes:none;font-size:.92rem;line-height:1.6;flex:1}
-.rcard q::before{content:"“";display:block;font-family:Sacramento,cursive;font-size:3rem;line-height:.6;color:var(--gold);margin-bottom:6px}
-.rcard footer{background:none;padding:0;text-align:left;font-size:.8rem;color:#7a6354}
-.rcard footer b{display:block;color:var(--brown-x);font-size:.88rem}
-.rmas{text-align:center;margin-top:14px}
 .visit{padding:40px 0 70px}
 .vpanel{background:var(--brown-x);color:#fff;border-radius:36px;padding:56px 28px;text-align:center}
 .vpanel .te{color:#f1c48f;font-size:2.4rem;line-height:1;display:block}
@@ -160,7 +149,7 @@ footer .wrap{display:flex;flex-direction:column;align-items:center;gap:14px}
 @keyframes flecha{0%,100%{transform:none;opacity:1}45%{transform:translateY(-14px);opacity:0}46%{transform:translateY(14px);opacity:0}}
 @keyframes flechaYa{to{transform:translateY(-34px);opacity:0}}
 .js .rv{opacity:0;transform:translateY(20px);transition:opacity .7s,transform .7s}.js .rv.in{opacity:1;transform:none}
-.js .card.rv.in:hover,.js .rcard.rv.in:hover{transform:translateY(-5px)}
+.js .card.rv.in:hover{transform:translateY(-5px)}
 @media(max-width:860px){.datos ul{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:760px){
  body{font-size:16px}.wrap{padding:0 18px}
@@ -179,7 +168,6 @@ footer .wrap{display:flex;flex-direction:column;align-items:center;gap:14px}
  .cards{grid-template-columns:1fr}.about{padding-top:56px}
  #menu{padding:4px 16px 26px;border-radius:22px}
  .list{grid-template-columns:1fr}
- .rcarr{padding:6px 18px 20px}
  .vcols{grid-template-columns:1fr}.vpanel{padding:44px 18px;border-radius:28px}
  .vb a{width:100%;text-align:center}
  iframe{height:270px}footer{padding-bottom:96px}.subir{right:18px}
@@ -250,12 +238,6 @@ footer .wrap{display:flex;flex-direction:column;align-items:center;gap:14px}
  </div>
 </section>
 
-<section class="rese" id="resenas">
- <div class="wrap"><div class="sec-title rv">Lo que dicen de nosotros</div></div>
- <div class="rcarr" id="rev" tabindex="0" aria-label="Reseñas de Google"></div>
- <p class="rmas"><a class="btn alt" id="revBtn" target="_blank" rel="noopener">Ver todas en Google</a></p>
-</section>
-
 <section class="visit" id="visitanos"><div class="wrap"><div class="vpanel">
  <span class="script te">Te esperamos</span>
  <h2>Pasá por Alfonsina</h2><span class="ul"></span>
@@ -316,20 +298,6 @@ $("mapbox").innerHTML='<iframe title="Mapa de Alfonsina y el Mar" loading="lazy"
 $("mapBtn").href=mp;
 var g=$("fig");g.href="https://instagram.com/"+INFO.instagram;g.textContent="@"+INFO.instagram;var b=$("igBtn");b.href=g.href;b.style.display="inline-flex";
 if(INFO.whatsapp){var u="https://wa.me/"+INFO.whatsapp+"?text="+encodeURIComponent("Hola! Quiero hacer una consulta");$("wa").href=u;$("wa").style.display="flex";$("navwa").href=u;$("navwa").style.display="inline-flex"}
-
-// Reseñas: "Nombre|Etiqueta|Texto"
-var REV=[
-"Cliente de Google||Excelente servicio y atención. La comida rica y variada, el café maravilloso y las opciones de libros una locura. Encima tienen opciones aptas celíacos, lo cual no es fácil conseguir.",
-"maria laura budetta|4 reseñas|Espectacular!!!! La atención, la decoración y los productos ofrecidos. Imperdibles el carrot cake y el latte. Único en Mataderos.",
-"Romina Eva Del Valle Gonzalez||El lugar es bellísimo y me contaron que tenés la opción de poder llevarte un libro a tu casa y devolverlo como en una biblioteca, lo que me pareció una muy linda idea… Las cookies muy ricas! Voy a volver 🙌🏽",
-"Einat Irigaray||Se nota que todo está hecho con mucho amor y dedicación. El ambiente es hermoso y las personas que lo atienden también! Muy rico todo!!!",
-"adrox 1|Local Guide|Entre la lectura y la música súper chill, salí super relajada del lugar. Siento que el café puede mejorar pero el lugar promete y mucho. El chico que nos atendió súper amable y el alquiler de libros suma puntos. Recomiendo ir!",
-"Paola Spina||Hermoso y cálido lugar. La atención increíble, todo riquísimo y accesible. Libros variados, hermoso para compartir momentos de lectura.",
-"Mariano Blasco|Local Guide|Excelente atención, excelente lugar, excelente café, excelente pastelería.",
-"Ezequiel Guzman|Local Guide|Fui el día que abrieron, todo de primer nivel."
-];
-$("rev").innerHTML=REV.map(function(r){var a=r.split("|");return '<figure class="rcard rv"><q>'+esc(a[2])+'</q><footer><b>'+esc(a[0])+'</b>'+(a[1]?esc(a[1])+' · ':'')+'Reseña en Google</footer></figure>'}).join("");
-$("revBtn").href=mp;
 
 // Estado abierto / cerrado en vivo
 function dur(n){var a=Math.floor(n/60),m=n%60;return a?a+" h"+(m?" "+m+" min":""):m+" min"}
