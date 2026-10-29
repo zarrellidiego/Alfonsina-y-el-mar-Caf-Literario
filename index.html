@@ -105,8 +105,24 @@ footer a{color:#f0c9a0}
 .copy{font-size:.82rem;opacity:.8}
 
 .wa{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:45;display:none;align-items:center;gap:8px;background:#1f8f3f;color:#fff;font-weight:600;text-decoration:none;padding:13px 20px;border-radius:99px;box-shadow:0 6px 18px rgba(0,0,0,.28)}
-.subir{position:fixed;right:16px;bottom:calc(76px + env(safe-area-inset-bottom,0px));z-index:44;width:46px;height:46px;border-radius:50%;border:1.5px solid var(--cafe);background:var(--papel);color:var(--cafe);display:grid;place-items:center;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .3s}
-.subir.ver{opacity:1;pointer-events:auto}
+.subir{position:fixed;right:16px;bottom:calc(76px + env(safe-area-inset-bottom,0px));z-index:44;width:52px;height:52px;border-radius:50%;border:0;background:var(--papel);color:var(--cafe);display:grid;place-items:center;cursor:pointer;box-shadow:0 6px 18px rgba(74,47,34,.3);opacity:0;transform:translateY(20px) scale(.6);pointer-events:none;transition:opacity .3s,transform .45s cubic-bezier(.34,1.56,.64,1),background .25s,color .25s;-webkit-tap-highlight-color:transparent}
+.subir.ver{opacity:1;transform:none;pointer-events:auto}
+.subir .anillo{position:absolute;inset:0;width:100%;height:100%;transform:rotate(-90deg)}
+.subir circle{fill:none;stroke-width:3}
+.subir .pista{stroke:var(--linea)}
+.subir .valor{stroke:var(--vino);stroke-linecap:round;stroke-dasharray:132;stroke-dashoffset:132}
+.subir .flecha{position:relative}
+.subir:hover{background:var(--cafe);color:var(--crema);transform:translateY(-3px) scale(1.06)}
+.subir:hover .flecha{animation:flecha .9s ease-in-out infinite}
+.subir:active{transform:scale(.9)}
+.subir.va .flecha{animation:flechaYa .6s ease-in}
+@keyframes flecha{0%,100%{transform:none;opacity:1}45%{transform:translateY(-14px);opacity:0}46%{transform:translateY(14px);opacity:0}}
+@keyframes flechaYa{to{transform:translateY(-34px);opacity:0}}
+.creditos a{display:inline-flex;align-items:center;gap:4px;color:#f0c9a0;font-weight:600;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px;transition:color .2s,transform .2s}
+.creditos a svg{transition:transform .2s}
+.creditos a:hover{color:#fff}
+.creditos a:hover svg{transform:translate(2px,-2px)}
+.creditos a:active{transform:scale(.96)}
 
 @media(max-width:760px){
  body{font-size:16px}.wrap{padding:0 18px}
@@ -169,11 +185,11 @@ footer a{color:#f0c9a0}
  <span>Murguiondo 1659, Buenos Aires</span>
  <a href="https://instagram.com/alfonsina.coffee" target="_blank" rel="noopener">@alfonsina.coffee</a>
  <span class="copy">© 2026 Alfonsina y el Mar · Los precios pueden cambiar sin previo aviso.</span>
- <span class="copy">Maqueta creada por <a href="https://wa.me/5491135679728?text=Hola%20Diego!%20Vi%20la%20maqueta%20de%20Alfonsina%20y%20el%20Mar" target="_blank" rel="noopener">Diego Zarrelli ↗</a></span>
+ <span class="copy creditos">Maqueta creada por <a href="https://wa.me/5491135679728?text=Hola%20Diego!%20Vi%20la%20maqueta%20de%20Alfonsina%20y%20el%20Mar" target="_blank" rel="noopener">Diego Zarrelli<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a></span>
 </div></footer>
 
 <a class="wa" id="wa" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">WhatsApp</a>
-<button class="subir" id="subir" type="button" aria-label="Volver arriba"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+<button class="subir" id="subir" type="button" aria-label="Volver arriba"><svg class="anillo" viewBox="0 0 48 48" aria-hidden="true"><circle class="pista" cx="24" cy="24" r="21"/><circle class="valor" cx="24" cy="24" r="21"/></svg><svg class="flecha" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
 
 <script>
 (function(){
@@ -223,9 +239,10 @@ estado();setInterval(estado,30000);
 
 // Scroll
 var hdr=document.querySelector("header.top"),sb=$("subir"),tk=false,links=[].slice.call(document.querySelectorAll("nav a"));
-function sc(){var y=window.pageYOffset||document.documentElement.scrollTop;hdr.classList.toggle("sc",y>10);sb.classList.toggle("ver",y>500);tk=false}
+var ring=sb.querySelector(".valor");
+function sc(){var y=window.pageYOffset||document.documentElement.scrollTop,h=document.documentElement.scrollHeight-window.innerHeight,p=h>0?Math.min(1,y/h):0;hdr.classList.toggle("sc",y>10);sb.classList.toggle("ver",y>500);ring.style.strokeDashoffset=(132*(1-p)).toFixed(1);tk=false}
 window.addEventListener("scroll",function(){if(!tk){tk=true;requestAnimationFrame(sc)}},{passive:true});sc();
-sb.addEventListener("click",function(){var r=matchMedia("(prefers-reduced-motion:reduce)").matches;window.scrollTo({top:0,behavior:r?"auto":"smooth"})});
+sb.addEventListener("click",function(){var r=matchMedia("(prefers-reduced-motion:reduce)").matches;sb.classList.add("va");setTimeout(function(){sb.classList.remove("va")},650);window.scrollTo({top:0,behavior:r?"auto":"smooth"})});
 if("IntersectionObserver" in window){var so=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){links.forEach(function(a){var on=a.getAttribute("href")==="#"+x.target.id&&a.textContent!=="Cómo llegar";a.classList.toggle("act",on)})}})},{rootMargin:"-40% 0px -55% 0px"});["carta","visitanos"].forEach(function(k){so.observe($(k))})}
 })();
 </script>
