@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#4a2f22">
+<title>Alfonsina y el Mar · Café literario</title>
+<meta name="description" content="Alfonsina y el Mar: café de especialidad, pastelería y libros en Murguiondo 1659. Mirá la carta y los horarios.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+<meta property="og:title" content="Alfonsina y el Mar · Café literario">
+<meta property="og:description" content="Café y libros en Murguiondo 1659. Mirá la carta completa.">
+<meta property="og:image" content="hero.jpg">
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--crema:#f4eee2;--papel:#fbf8f1;--cafe:#4a2f22;--cafe-2:#7a5440;--vino:#7b2d3b;--linea:#dccfba;--r:6px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px;-webkit-text-size-adjust:100%}
+body{font-family:Jost,system-ui,sans-serif;background:var(--crema);color:var(--cafe);line-height:1.6;font-size:17px;overflow-x:hidden}
+a{color:inherit}ul{list-style:none}img{max-width:100%}
+:focus-visible{outline:3px solid var(--vino);outline-offset:3px}
+.wrap{max-width:1000px;margin:0 auto;padding:0 22px}
+.serif{font-family:"Cormorant Garamond",Georgia,serif}
+.skip{position:absolute;left:-999px;top:8px;background:var(--cafe);color:#fff;padding:10px 16px;z-index:100}.skip:focus{left:8px}
+h2{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;font-size:clamp(2.2rem,6vw,3.2rem);line-height:1.05;margin-bottom:10px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 26px;border:1.5px solid var(--cafe);border-radius:99px;font-weight:500;text-decoration:none;transition:background .2s,color .2s,transform .15s}
+.btn:active{transform:scale(.97)}
+.btn.fill{background:var(--cafe);color:var(--crema)}.btn.fill:hover{background:var(--vino);border-color:var(--vino)}
+.btn.line:hover{background:var(--cafe);color:var(--crema)}
+
+header.top{position:sticky;top:0;z-index:50;background:rgba(244,238,226,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--linea);transition:box-shadow .3s}
+header.top.sc{box-shadow:0 6px 20px rgba(74,47,34,.12)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;min-height:62px;gap:16px}
+.brand{font-family:"Cormorant Garamond",serif;font-weight:700;font-size:1.5rem;text-decoration:none;display:flex;align-items:center;gap:10px;line-height:1}
+.brand img{width:36px;height:36px;border-radius:50%;object-fit:cover}
+nav{display:flex;gap:4px;font-weight:500;font-size:.92rem}
+nav a{text-decoration:none;padding:8px 12px;border-bottom:2px solid transparent}
+nav a:hover,nav a.act{border-color:var(--vino)}
+
+.hero{padding:64px 0 72px;border-bottom:1px solid var(--linea)}
+.hero .wrap{display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:center}
+.estado{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--linea);background:var(--papel);border-radius:99px;padding:6px 14px;font-size:.86rem;font-weight:500;margin-bottom:22px}
+.estado i{width:9px;height:9px;border-radius:50%;background:#4f9a62;flex:none}
+.estado.pronto i{background:#d9a13b}.estado.cerrado i{background:#b5624d}
+.hero h1{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:clamp(3.4rem,11vw,6.8rem);line-height:.92;letter-spacing:-.02em}
+.hero h1 em{font-weight:500;color:var(--vino)}
+.hero .lead{max-width:30ch;font-size:1.25rem;margin:22px 0 28px;font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:500;color:var(--cafe-2);line-height:1.35}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.sello{justify-self:center;position:relative;width:min(100%,320px);aspect-ratio:1;border-radius:50%;background:var(--papel);border:1.5px solid var(--cafe);display:grid;place-items:center;padding:14px}
+.sello::before{content:"";position:absolute;inset:8px;border:1px solid var(--linea);border-radius:50%}
+.sello img{width:100%;height:100%;object-fit:contain;border-radius:50%}
+.sello .alt{font-family:"Cormorant Garamond",serif;font-size:2rem;text-align:center;line-height:1.05;padding:30px}
+.js .hero .wrap>*{animation:in .9s both cubic-bezier(.2,.7,.2,1)}.js .hero .wrap>*:nth-child(2){animation-delay:.2s}
+@keyframes in{from{opacity:0;transform:translateY(22px)}}
+
+.datos{padding:0}
+.datos ul{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--linea)}
+.datos li{padding:22px 16px;border-left:1px solid var(--linea);font-size:.95rem}
+.datos li:first-child{border-left:0;padding-left:0}
+.datos small{display:block;font-family:"Cormorant Garamond",serif;font-style:italic;font-size:1.2rem;color:var(--vino);line-height:1.1}
+.datos b{font-weight:500}
+
+section{padding:72px 0;scroll-margin-top:84px}
+.sub{max-width:52ch;color:var(--cafe-2);margin-bottom:28px}
+
+.chips{position:sticky;top:62px;z-index:40;display:flex;gap:8px;overflow-x:auto;padding:10px 22px;background:rgba(244,238,226,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--linea);scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chips button{flex:none;font:inherit;font-size:.88rem;font-weight:500;min-height:40px;padding:8px 18px;border-radius:99px;border:1.5px solid var(--cafe);background:transparent;color:var(--cafe);cursor:pointer;transition:background .2s,color .2s}
+.chips button[aria-pressed="true"]{background:var(--cafe);color:var(--crema)}
+#menu{background:var(--papel);border:1px solid var(--linea);border-radius:var(--r);padding:12px 36px 36px;margin-top:22px}
+.msec{display:none;padding-top:26px}.msec.on{display:block;animation:in .45s both}
+.msec h3{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:2rem;line-height:1.1}
+.msec .n{font-size:.9rem;font-style:italic;color:var(--cafe-2);margin-top:4px;max-width:60ch}
+.list{display:grid;grid-template-columns:1fr 1fr;gap:2px 52px;margin-top:18px}
+.it{padding:9px 0}
+.it .row{display:flex;align-items:baseline;gap:8px}
+.it .nm{font-weight:500}
+.it .dots{flex:1;min-width:12px;border-bottom:1.5px dotted var(--cafe-2);opacity:.5;transform:translateY(-4px)}
+.it .p{font-weight:600;color:var(--vino);white-space:nowrap}
+.it .d{font-size:.86rem;color:var(--cafe-2);font-style:italic}
+.aviso{font-size:.85rem;color:var(--cafe-2);margin-top:16px}
+
+.visita{background:var(--cafe);color:var(--crema);border-radius:0}
+.visita h2{color:var(--crema)}
+.vgrid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start;margin-top:26px}
+.dir{font-size:1.15rem;margin-bottom:18px}
+.dir span{color:#d9c6ae;font-size:.95rem}
+table{width:100%;border-collapse:collapse;margin-bottom:26px}
+td{padding:10px 0;border-bottom:1px solid rgba(244,238,226,.25);vertical-align:top}
+td:last-child{text-align:right}
+.hoy td{font-weight:600;color:#f0c9a0}
+.vb{display:flex;gap:10px;flex-wrap:wrap}
+.visita .btn{border-color:var(--crema);color:var(--crema)}
+.visita .btn.fill{background:var(--crema);color:var(--cafe)}.visita .btn.fill:hover{background:#f0c9a0;border-color:#f0c9a0}
+.visita .btn.line:hover{background:var(--crema);color:var(--cafe)}
+iframe{display:block;width:100%;height:340px;border:0;border-radius:var(--r);background:#fff}
+
+footer{background:#33201a;color:#d9c6ae;padding:36px 0 40px;text-align:center;font-size:.92rem}
+footer .wrap{display:flex;flex-direction:column;align-items:center;gap:10px}
+footer a{color:#f0c9a0}
+.copy{font-size:.82rem;opacity:.8}
+
+.wa{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:45;display:none;align-items:center;gap:8px;background:#1f8f3f;color:#fff;font-weight:600;text-decoration:none;padding:13px 20px;border-radius:99px;box-shadow:0 6px 18px rgba(0,0,0,.28)}
+.subir{position:fixed;right:16px;bottom:calc(76px + env(safe-area-inset-bottom,0px));z-index:44;width:46px;height:46px;border-radius:50%;border:1.5px solid var(--cafe);background:var(--papel);color:var(--cafe);display:grid;place-items:center;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .3s}
+.subir.ver{opacity:1;pointer-events:auto}
+
+@media(max-width:760px){
+ body{font-size:16px}.wrap{padding:0 18px}
+ header.top .wrap{flex-direction:column;gap:0;padding-top:8px}
+ nav{width:100%;justify-content:space-between}nav a{padding:10px 6px}
+ .chips{top:84px;padding:10px 18px}
+ .hero{padding:40px 0 48px}.hero .wrap{grid-template-columns:1fr;gap:34px}
+ .sello{width:min(70%,230px)}
+ .datos ul{grid-template-columns:1fr 1fr}.datos li{border-left:0;border-top:1px solid var(--linea);padding:16px 0}.datos li:nth-child(-n+2){border-top:0}
+ section{padding:52px 0}
+ #menu{padding:4px 18px 28px}.list{grid-template-columns:1fr}
+ .vgrid{grid-template-columns:1fr}.vb .btn{width:100%}
+ iframe{height:270px}footer{padding-bottom:100px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#carta">Saltar a la carta</a>
+<header class="top"><div class="wrap">
+ <a class="brand" href="#top" aria-label="Alfonsina y el Mar, inicio"><img src="logo.png" alt="" width="36" height="36" onerror="this.remove()">Alfonsina y el Mar</a>
+ <nav aria-label="Principal"><a href="#carta">Carta</a><a href="#visitanos">Horarios</a><a href="#visitanos">Cómo llegar</a></nav>
+</div></header>
+
+<main>
+<div class="hero" id="top"><div class="wrap">
+ <div>
+  <div class="estado" id="estado"><i></i><span id="et">Café y libros en Murguiondo 1659</span></div>
+  <h1>Alfonsina<br><em>y el Mar</em></h1>
+  <p class="lead">Café literario y winery. Cada detalle es un lujo.</p>
+  <div class="cta"><a class="btn fill" href="#carta">Ver la carta</a><a class="btn line" href="#visitanos">Cómo llegar</a></div>
+ </div>
+ <div class="sello"><img src="logo.png" alt="Logo de Alfonsina y el Mar" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'alt',textContent:'Café y libros'}))"></div>
+</div></div>
+
+<div class="datos"><div class="wrap"><ul>
+ <li><small>Café</small><b>Especialidad de cuatro orígenes</b></li>
+ <li><small>Dulces y salados</small><b>Medialunas, tostados, cookies y budín</b></li>
+ <li><small>Sin TACC</small><b>Lemonie, alfajor cookie y brownie</b></li>
+ <li><small>Dónde</small><b>Murguiondo 1659</b></li>
+</ul></div></div>
+
+<section id="carta">
+ <div class="wrap"><h2>La carta</h2><p class="sub">Café, infusiones, algo para acompañar y opciones sin TACC.</p></div>
+ <div class="chips" id="chips" role="group" aria-label="Categorías de la carta"></div>
+ <div class="wrap"><div id="menu"></div><p class="aviso">Los precios pueden cambiar sin previo aviso.</p></div>
+</section>
+
+<section class="visita" id="visitanos"><div class="wrap">
+ <h2>Venite a Alfonsina</h2>
+ <div class="vgrid">
+  <div id="vinfo"></div>
+  <iframe title="Mapa de Alfonsina y el Mar" loading="lazy" src="https://www.google.com/maps?q=Murguiondo+1659,+Buenos+Aires,+Argentina&amp;output=embed"></iframe>
+ </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+ <b class="serif" style="font-size:1.4rem;color:#f4eee2">Alfonsina y el Mar</b>
+ <span>Murguiondo 1659, Buenos Aires</span>
+ <a href="https://instagram.com/alfonsina.coffee" target="_blank" rel="noopener">@alfonsina.coffee</a>
+ <span class="copy">© 2026 Alfonsina y el Mar · Los precios pueden cambiar sin previo aviso.</span>
+ <span class="copy">Maqueta creada por <a href="https://wa.me/5491135679728?text=Hola%20Diego!%20Vi%20la%20maqueta%20de%20Alfonsina%20y%20el%20Mar" target="_blank" rel="noopener">Diego Zarrelli ↗</a></span>
+</div></footer>
+
+<a class="wa" id="wa" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">WhatsApp</a>
+<button class="subir" id="subir" type="button" aria-label="Volver arriba"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+
+<script>
+(function(){
+document.documentElement.classList.add("js");
+var $=function(i){return document.getElementById(i)};
+// ✏️ Datos del local. Lo que dejes vacío no se muestra.
+var INFO={whatsapp:"",instagram:"alfonsina.coffee",address:"Murguiondo 1659",ref:"A metros de Alberdi, Buenos Aires"};
+// Horarios por día (0 = domingo). Cada tramo: [abre, cierra] en horas.
+var H={0:[[16,21]],1:[[13,20]],2:[[10,13],[16,21]],3:[[10,13],[16,21]],4:[[10,13],[16,21]],5:[[10,13],[16,21]],6:[[11,21]]};
+var ROWS=[["Lunes",1],["Martes a viernes",2],["Sábados",6],["Domingos",0]];
+var txt=function(d){return H[d].map(function(t){return t[0]+" a "+t[1]}).join(" y ")+" hs"};
+// Carta: "Nombre|Precio|Descripción (opcional)"
+var MENU=[
+{id:"cafe",c:"Café",t:"Café",i:["Café filtrado|$5.000","Café expreso doble|$4.000","Americano|$5.000","Café con leche|$5.500|Opción crema +$500","Flat white|$6.500|Café expreso acompañado de una medida de leche caliente","Capuchino|$7.300","Capuchino italiano|$8.300","Submarino|$7.300","Latte saborizado (frío o caliente)|$8.500|Pistacho, dulce de leche, vainilla, caramelo o chocolate","Irish coffee|$7.500|Puede ser con whisky o Baileys","Cookie cup|$7.000"]},
+{id:"esp",c:"Especialidad",t:"Café de especialidad",i:["Etiopía|$4.500|Con notas de pera","Nicaragua|$4.500|Con notas de pasas y malta, amaretto y cítricos","Costa Rica|$4.500|Con notas de almendra caramelizada y chocolate, acidez media","Colombia|$4.500|Orgánico, con notas de caramelo, frutos secos y chocolate amargo","Café turco|$4.000"]},
+{id:"inf",c:"Infusiones",t:"Infusiones",i:["Té turco|$5.000","Té en hebras|$5.000|Consultar sabores","Té en saquito a elección|$3.400"]},
+{id:"sal",c:"Salados",t:"Salados",i:["Medialuna de manteca|$2.500","Medialuna de manteca con JYQ|$3.500","Croissant|$3.500","Croissant con JYQ|$4.500","Tostado de miga|$5.200","Tostado pan ciabatta|$6.000","Chipá x2|$5.500","Sándwich en pan de chipá|$6.300","Scon de queso|$3.500","Tostadas|$7.500|Con dos dips a elección: manteca, queso crema, mermelada, dulce de leche o palta"]},
+{id:"dul",c:"Dulces",t:"Dulces",i:["Alfajores|$3.500","Mini cake|$8.500","Brownie con nuez|$4.000","Coco con dulce de leche|$4.000","Cookie|$2.500","Cookie XL|$5.500","Porción de budín|$6.300"]},
+{id:"tacc",c:"Sin TACC",t:"Sin TACC",i:["Lemonie|$10.000","Alfajor cookie|$10.000","Brownie|$10.000"]},
+{id:"beb",c:"Bebidas frías",t:"Bebidas frías",i:["Limonada con menta y jengibre|$4.000","Aguas saborizadas|$3.500","Gaseosas|$3.500","Agua mineral|$2.500","Licuados|$6.000"]}
+];
+var esc=function(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})};
+$("menu").innerHTML=MENU.map(function(m){return '<div class="msec" id="m-'+m.id+'"><h3>'+esc(m.t)+'</h3>'+(m.n?'<p class="n">'+esc(m.n)+'</p>':"")+'<div class="list">'+m.i.map(function(x){var a=x.split("|");return '<div class="it"><div class="row"><span class="nm">'+esc(a[0])+'</span><span class="dots"></span><span class="p">'+esc(a[1])+'</span></div>'+(a[2]?'<div class="d">'+esc(a[2])+'</div>':"")+'</div>'}).join("")+'</div></div>'}).join("");
+$("chips").innerHTML=MENU.map(function(m){return '<button type="button" data-id="'+m.id+'" aria-pressed="false">'+esc(m.c)+'</button>'}).join("");
+var tabs=[].slice.call(document.querySelectorAll("#chips button")),secs=[].slice.call(document.querySelectorAll(".msec"));
+function show(id,sc){tabs.forEach(function(b){var on=b.dataset.id===id;b.setAttribute("aria-pressed",on);if(on&&sc)b.scrollIntoView({inline:"center",block:"nearest",behavior:"smooth"})});secs.forEach(function(s){s.classList.toggle("on",s.id==="m-"+id)})}
+tabs.forEach(function(b){b.addEventListener("click",function(){show(b.dataset.id,true)})});show("cafe");
+
+// Visitanos
+var mp="https://www.google.com/maps/search/?api=1&query="+encodeURIComponent("Murguiondo 1659, Buenos Aires");
+function hoyDia(){try{var p=new Intl.DateTimeFormat("en-US",{timeZone:"America/Argentina/Buenos_Aires",weekday:"short"}).format(new Date());return["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].indexOf(p)}catch(e){return -1}}
+var hd=hoyDia(),grp=function(d){return d>=2&&d<=5?2:d};
+$("vinfo").innerHTML='<p class="dir"><b>'+esc(INFO.address)+'</b><br><span>'+esc(INFO.ref)+'</span></p><table>'+ROWS.map(function(r){return '<tr'+(grp(hd)===r[1]?' class="hoy"':"")+'><td>'+r[0]+'</td><td>'+txt(r[1])+'</td></tr>'}).join("")+'</table><div class="vb"><a class="btn fill" href="'+mp+'" target="_blank" rel="noopener">Cómo llegar</a>'+(INFO.whatsapp?'<a class="btn line" href="https://wa.me/'+INFO.whatsapp+'" target="_blank" rel="noopener">WhatsApp</a>':"")+'<a class="btn line" href="https://instagram.com/'+INFO.instagram+'" target="_blank" rel="noopener">Instagram</a></div>';
+if(INFO.whatsapp){var w=$("wa");w.href="https://wa.me/"+INFO.whatsapp+"?text="+encodeURIComponent("Hola! Quiero hacer una consulta");w.style.display="inline-flex"}
+
+// Estado abierto / cerrado (con corte del mediodía)
+function dur(n){var a=Math.floor(n/60),m=n%60;return a?a+" h"+(m?" "+m+" min":""):m+" min"}
+function estado(){try{
+ var p=new Intl.DateTimeFormat("en-US",{timeZone:"America/Argentina/Buenos_Aires",weekday:"short",hour:"numeric",minute:"numeric",hour12:false}).formatToParts(new Date()),
+ g=function(t){return p.find(function(x){return x.type===t}).value},
+ d=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].indexOf(g("weekday")),m=(+g("hour")%24)*60+(+g("minute")),e=$("estado"),t=$("et"),cls="",x,sl=H[d],cur=null,next=null;
+ sl.forEach(function(s){if(m>=s[0]*60&&m<s[1]*60)cur=s;else if(m<s[0]*60&&!next)next=s});
+ if(cur){var r=cur[1]*60-m;if(r<=60){cls="pronto";x="Cerramos "+(cur[1]===13?"al mediodía":"")+" en "+dur(r)}else x="Abierto ahora, hasta las "+cur[1]+" hs"}
+ else{cls="cerrado";if(next)x="Abrimos hoy a las "+next[0]+" hs";else{var n=(d+1)%7;x="Cerrado ahora. Mañana abrimos a las "+H[n][0][0]+" hs"}}
+ e.classList.toggle("pronto",cls==="pronto");e.classList.toggle("cerrado",cls==="cerrado");t.textContent=x.replace("  "," ")}catch(err){}}
+estado();setInterval(estado,30000);
+
+// Scroll
+var hdr=document.querySelector("header.top"),sb=$("subir"),tk=false,links=[].slice.call(document.querySelectorAll("nav a"));
+function sc(){var y=window.pageYOffset||document.documentElement.scrollTop;hdr.classList.toggle("sc",y>10);sb.classList.toggle("ver",y>500);tk=false}
+window.addEventListener("scroll",function(){if(!tk){tk=true;requestAnimationFrame(sc)}},{passive:true});sc();
+sb.addEventListener("click",function(){var r=matchMedia("(prefers-reduced-motion:reduce)").matches;window.scrollTo({top:0,behavior:r?"auto":"smooth"})});
+if("IntersectionObserver" in window){var so=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){links.forEach(function(a){var on=a.getAttribute("href")==="#"+x.target.id&&a.textContent!=="Cómo llegar";a.classList.toggle("act",on)})}})},{rootMargin:"-40% 0px -55% 0px"});["carta","visitanos"].forEach(function(k){so.observe($(k))})}
+})();
+</script>
+</body>
+</html>
