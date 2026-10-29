@@ -42,41 +42,42 @@ nav a{text-decoration:none;padding:8px 12px;border-bottom:2px solid transparent}
 nav a:hover,nav a.act{border-color:var(--vino)}
 
 .hero{padding:64px 0 72px;border-bottom:1px solid var(--linea)}
-.hero .wrap{display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:center}
+.hero .wrap{display:flex;flex-direction:column;align-items:center;text-align:center;gap:40px}
+.hero .txt{display:flex;flex-direction:column;align-items:center}
 .estado{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--linea);background:var(--papel);border-radius:99px;padding:6px 14px;font-size:.86rem;font-weight:500;margin-bottom:22px}
 .estado i{width:9px;height:9px;border-radius:50%;background:#4f9a62;flex:none}
 .estado.pronto i{background:#d9a13b}.estado.cerrado i{background:#b5624d}
 .hero h1{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:clamp(3.4rem,11vw,6.8rem);line-height:.92;letter-spacing:-.02em}
 .hero h1 em{font-weight:500;color:var(--vino)}
-.hero .lead{max-width:30ch;font-size:1.25rem;margin:22px 0 28px;font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:500;color:var(--cafe-2);line-height:1.35}
-.cta{display:flex;gap:12px;flex-wrap:wrap}
-.sello{justify-self:center;position:relative;width:min(100%,320px);aspect-ratio:1;border-radius:50%;background:var(--papel);border:1.5px solid var(--cafe);display:grid;place-items:center;padding:14px}
-.sello::before{content:"";position:absolute;inset:8px;border:1px solid var(--linea);border-radius:50%}
-.sello img{width:100%;height:100%;object-fit:contain;border-radius:50%}
-.sello .alt{font-family:"Cormorant Garamond",serif;font-size:2rem;text-align:center;line-height:1.05;padding:30px}
+.hero .lead{max-width:30ch;margin-inline:auto;font-size:1.25rem;margin:22px 0 28px;font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:500;color:var(--cafe-2);line-height:1.35}
+.cta{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.foto{position:relative;width:min(100%,520px)}
+.foto img.ph{display:block;width:100%;aspect-ratio:1;object-fit:cover;border-radius:var(--r);border:1px solid var(--linea);box-shadow:0 18px 40px rgba(74,47,34,.2)}
+.foto .logo{position:absolute;left:50%;bottom:-46px;transform:translateX(-50%);width:120px;height:120px;border-radius:50%;object-fit:cover;border:4px solid var(--crema);background:var(--papel);box-shadow:0 8px 20px rgba(74,47,34,.25)}
 .js .hero .wrap>*{animation:in .9s both cubic-bezier(.2,.7,.2,1)}.js .hero .wrap>*:nth-child(2){animation-delay:.2s}
 @keyframes in{from{opacity:0;transform:translateY(22px)}}
 
 .datos{padding:0}
-.datos ul{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--linea)}
+.datos{padding-top:46px}
+.datos ul{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--linea);text-align:center}
 .datos li{padding:22px 16px;border-left:1px solid var(--linea);font-size:.95rem}
-.datos li:first-child{border-left:0;padding-left:0}
+.datos li:first-child{border-left:0}
 .datos small{display:block;font-family:"Cormorant Garamond",serif;font-style:italic;font-size:1.2rem;color:var(--vino);line-height:1.1}
 .datos b{font-weight:500}
 
-section{padding:72px 0;scroll-margin-top:84px}
-.sub{max-width:52ch;color:var(--cafe-2);margin-bottom:28px}
+section{padding:72px 0;scroll-margin-top:84px;text-align:center}
+.sub{max-width:52ch;color:var(--cafe-2);margin:0 auto 28px}
 
-.chips{position:sticky;top:62px;z-index:40;display:flex;gap:8px;overflow-x:auto;padding:10px 22px;background:rgba(244,238,226,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--linea);scrollbar-width:none}
+.chips{justify-content:safe center;position:sticky;top:62px;z-index:40;display:flex;gap:8px;overflow-x:auto;padding:10px 22px;background:rgba(244,238,226,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--linea);scrollbar-width:none}
 .chips::-webkit-scrollbar{display:none}
 .chips button{flex:none;font:inherit;font-size:.88rem;font-weight:500;min-height:40px;padding:8px 18px;border-radius:99px;border:1.5px solid var(--cafe);background:transparent;color:var(--cafe);cursor:pointer;transition:background .2s,color .2s}
 .chips button[aria-pressed="true"]{background:var(--cafe);color:var(--crema)}
 #menu{background:var(--papel);border:1px solid var(--linea);border-radius:var(--r);padding:12px 36px 36px;margin-top:22px}
 .msec{display:none;padding-top:26px}.msec.on{display:block;animation:in .45s both}
 .msec h3{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:2rem;line-height:1.1}
-.msec .n{font-size:.9rem;font-style:italic;color:var(--cafe-2);margin-top:4px;max-width:60ch}
+.msec .n{font-size:.9rem;font-style:italic;color:var(--cafe-2);margin:4px auto 0;max-width:60ch}
 .list{display:grid;grid-template-columns:1fr 1fr;gap:2px 52px;margin-top:18px}
-.it{padding:9px 0}
+.it{padding:9px 0;text-align:left}
 .it .row{display:flex;align-items:baseline;gap:8px}
 .it .nm{font-weight:500}
 .it .dots{flex:1;min-width:12px;border-bottom:1.5px dotted var(--cafe-2);opacity:.5;transform:translateY(-4px)}
@@ -86,18 +87,19 @@ section{padding:72px 0;scroll-margin-top:84px}
 
 .visita{background:var(--cafe);color:var(--crema);border-radius:0}
 .visita h2{color:var(--crema)}
-.vgrid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start;margin-top:26px}
+.vgrid{display:grid;grid-template-columns:1fr;gap:34px;justify-items:center;margin-top:26px}
+#vinfo{width:100%;max-width:400px}
 .dir{font-size:1.15rem;margin-bottom:18px}
 .dir span{color:#d9c6ae;font-size:.95rem}
-table{width:100%;border-collapse:collapse;margin-bottom:26px}
+table{width:100%;text-align:left;border-collapse:collapse;margin-bottom:26px}
 td{padding:10px 0;border-bottom:1px solid rgba(244,238,226,.25);vertical-align:top}
 td:last-child{text-align:right}
 .hoy td{font-weight:600;color:#f0c9a0}
-.vb{display:flex;gap:10px;flex-wrap:wrap}
+.vb{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
 .visita .btn{border-color:var(--crema);color:var(--crema)}
 .visita .btn.fill{background:var(--crema);color:var(--cafe)}.visita .btn.fill:hover{background:#f0c9a0;border-color:#f0c9a0}
 .visita .btn.line:hover{background:var(--crema);color:var(--cafe)}
-iframe{display:block;width:100%;height:340px;border:0;border-radius:var(--r);background:#fff}
+iframe{display:block;width:100%;max-width:760px;height:340px;border:0;border-radius:var(--r);background:#fff}
 
 footer{background:#33201a;color:#d9c6ae;padding:36px 0 40px;text-align:center;font-size:.92rem}
 footer .wrap{display:flex;flex-direction:column;align-items:center;gap:10px}
@@ -129,12 +131,12 @@ footer a{color:#f0c9a0}
  header.top .wrap{flex-direction:column;gap:0;padding-top:8px}
  nav{width:100%;justify-content:space-between}nav a{padding:10px 6px}
  .chips{top:84px;padding:10px 18px}
- .hero{padding:40px 0 48px}.hero .wrap{grid-template-columns:1fr;gap:34px}
- .sello{width:min(70%,230px)}
+ .hero{padding:40px 0 70px}.hero .wrap{gap:32px}
+ .foto .logo{width:96px;height:96px;bottom:-38px}
  .datos ul{grid-template-columns:1fr 1fr}.datos li{border-left:0;border-top:1px solid var(--linea);padding:16px 0}.datos li:nth-child(-n+2){border-top:0}
  section{padding:52px 0}
  #menu{padding:4px 18px 28px}.list{grid-template-columns:1fr}
- .vgrid{grid-template-columns:1fr}.vb .btn{width:100%}
+ .vb .btn{width:100%}
  iframe{height:270px}footer{padding-bottom:100px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
@@ -149,13 +151,16 @@ footer a{color:#f0c9a0}
 
 <main>
 <div class="hero" id="top"><div class="wrap">
- <div>
+ <div class="txt">
   <div class="estado" id="estado"><i></i><span id="et">Café y libros en Murguiondo 1659</span></div>
   <h1>Alfonsina<br><em>y el Mar</em></h1>
   <p class="lead">Café literario y winery. Cada detalle es un lujo.</p>
   <div class="cta"><a class="btn fill" href="#carta">Ver la carta</a><a class="btn line" href="#visitanos">Cómo llegar</a></div>
  </div>
- <div class="sello"><img src="logo.png" alt="Logo de Alfonsina y el Mar" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'alt',textContent:'Café y libros'}))"></div>
+ <div class="foto">
+  <img class="ph" src="hero.jpg" alt="Café y porción de dulce de leche sobre una mesa en la vereda de Alfonsina y el Mar" width="1000" height="1000" fetchpriority="high">
+  <img class="logo" src="logo.png" alt="Logo de Alfonsina y el Mar" width="120" height="120">
+ </div>
 </div></div>
 
 <div class="datos"><div class="wrap"><ul>
