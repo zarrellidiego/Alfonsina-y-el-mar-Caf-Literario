@@ -3,396 +3,278 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#5b3a2a">
-<title>Alfonsina y el Mar · Café literario</title>
-<meta name="description" content="Alfonsina y el Mar: café de especialidad, pastelería y libros en Murguiondo 1659. Mirá la carta completa y los horarios.">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="es_AR">
-<meta property="og:title" content="Alfonsina y el Mar · Café literario">
-<meta property="og:description" content="Café y libros en Murguiondo 1659. Mirá la carta completa.">
-<meta property="og:image" content="hero.jpg">
-<link rel="icon" href="logo.png">
+<meta name="theme-color" content="#f6ead3">
+<title>Alfonsina y el Mar · Café y libros</title>
+<meta name="description" content="Café de especialidad, pastelería y libros en Murguiondo 1659. Mirá la carta y los horarios.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Sacramento&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--tan:#e4d6c0;--brown:#5b3a2a;--brown-x:#3a241a;--wine:#7b2d3b;--gold:#c98f5a;--ink:#3b2a21;--soft:#f7f1e6;--line:#e4d6c0;--r:22px}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%}
-body{font-family:Montserrat,system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.55;overflow-x:hidden}
-a{color:inherit;text-decoration:none}ul{list-style:none}img{max-width:100%}
-:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
-.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
-.script{font-family:Sacramento,cursive;font-weight:400}
-.skip{position:absolute;left:-999px;top:8px;background:var(--brown-x);color:#fff;padding:10px 16px;border-radius:8px;z-index:100}.skip:focus{left:8px}
-section{scroll-margin-top:84px}
-.progreso{position:fixed;top:0;left:0;right:0;height:4px;z-index:60;transform-origin:0 50%;transform:scaleX(var(--p,0));background:linear-gradient(90deg,var(--gold),var(--wine),var(--brown));pointer-events:none}
-.btn{position:relative;overflow:hidden;isolation:isolate;display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 26px;border-radius:99px;font-weight:600;font-size:.92rem;border:2px solid var(--brown);transition:background .2s,color .2s,transform .15s}
-.btn::after{content:"";position:absolute;top:0;bottom:0;left:-60%;width:40%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.5),transparent);transform:skewX(-20deg);transition:left .6s;z-index:-1}
-.btn:hover::after{left:130%}.btn:active{transform:scale(.96)}
-.btn.main{background:var(--brown);color:#fff}.btn.main:hover{background:var(--wine);border-color:var(--wine)}
-.btn.alt{color:var(--brown)}.btn.alt:hover{background:var(--brown);color:#fff}
-header.top{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);transition:box-shadow .3s}
-header.top.scrolled{box-shadow:0 8px 24px rgba(58,36,26,.12)}
-header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:62px}
-.brand{display:flex;align-items:center;gap:10px;font-size:1.9rem;line-height:1;color:var(--brown)}
-.brand img{width:40px;height:40px;border-radius:50%;object-fit:cover;border:1px solid var(--line)}
-nav{display:flex;align-items:center;gap:6px;font-size:.82rem;font-weight:600}
-nav a{position:relative;padding:8px 12px;letter-spacing:.04em}
-nav a::after{content:"";position:absolute;left:12px;right:12px;bottom:2px;height:3px;border-radius:3px;background:var(--gold);transform:scaleX(0);transition:transform .3s}
-nav a:hover::after,nav a.act::after{transform:scaleX(1)}
-nav a.act{color:var(--brown)}
-nav .navwa{background:var(--wine);color:#fff;border-radius:99px;margin-left:6px}nav .navwa::after{display:none}
-.hero{position:relative;overflow:hidden;background:linear-gradient(160deg,#f1e7d6 0%,#fff 62%);padding:44px 0 96px;border-radius:0 0 44px 44px}
-.hero::before{content:"";position:absolute;width:480px;height:480px;right:-140px;top:-160px;border-radius:50%;background:radial-gradient(circle,rgba(201,143,90,.4),transparent 65%);animation:flota 14s ease-in-out infinite}
-.hero::after{content:"";position:absolute;width:380px;height:380px;left:-140px;bottom:-190px;border-radius:50%;background:radial-gradient(circle,rgba(123,45,59,.22),transparent 65%);animation:flota 17s ease-in-out infinite reverse}
-@keyframes flota{50%{transform:translate(-30px,24px) scale(1.12)}}
-.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
-.estado{display:inline-flex;align-items:center;gap:9px;background:#fff;border:1px solid var(--line);border-radius:99px;padding:7px 15px;font-size:.8rem;font-weight:600;margin-bottom:18px}
-.estado i{position:relative;width:10px;height:10px;border-radius:50%;background:#3fbf7f;flex:none}
-.estado i::after{content:"";position:absolute;inset:0;border-radius:50%;background:inherit;animation:ping 1.8s ease-out infinite}
-.estado.pronto i{background:#f0b64a}.estado.cerrado i{background:#d9825f}.estado.cerrado i::after{animation:none;opacity:0}
-@keyframes ping{from{transform:scale(1);opacity:.8}to{transform:scale(3.2);opacity:0}}
-.hero h1{font-size:clamp(4.2rem,14vw,7rem);line-height:.9;color:var(--brown)}
-.hero .sub{font-weight:600;font-size:.88rem;letter-spacing:.18em;text-transform:uppercase;color:var(--wine);margin:10px 0 18px}
-.hero p.lead{max-width:420px;margin-bottom:26px;font-size:1.05rem}
+:root{--crema:#f6ead3;--leche:#fff8ea;--esp:#2b1a14;--car:#d98e3f;--pist:#aebf8a;--tomate:#b3472f;--bg:var(--crema);--fg:#2b1a14;--mut:#7a5f50;--card:#fff8ea;--disp:"Bricolage Grotesque",system-ui,sans-serif;--sans:"DM Sans",system-ui,sans-serif;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1d110c;--fg:#f6ead3;--mut:#c4a995;--card:#2b1a14}}
+:root[data-theme="dark"]{--bg:#1d110c;--fg:#f6ead3;--mut:#c4a995;--card:#2b1a14}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px));height:100%;-webkit-text-size-adjust:100%}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 1.03rem/1.6 var(--sans);overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--car);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--disp);margin:0;line-height:1}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:60}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--bg)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:64px}
+.mark{font-family:var(--disp);font-weight:800;font-size:1.2rem;text-decoration:none;letter-spacing:-.01em;white-space:nowrap}
+nav{display:flex;align-items:center;gap:2px}
+nav a{text-decoration:none;font-weight:500;font-size:.92rem;padding:10px 13px;border-radius:99px;transition:background .2s}
+nav a:hover,nav a.act{background:rgba(217,142,63,.25)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:13px 26px;border-radius:99px;font-weight:600;text-decoration:none;border:2px solid var(--esp);transition:transform .15s,background .2s,color .2s}
+.btn:active{transform:scale(.96)}
+.btn.p{background:var(--esp);color:var(--crema)}.btn.p:hover{background:var(--tomate);border-color:var(--tomate)}
+.btn.o{color:var(--fg);border-color:var(--fg)}.btn.o:hover{background:var(--fg);color:var(--bg)}
 .cta{display:flex;gap:12px;flex-wrap:wrap}
-.js .hero-txt>*{animation:sube .8s both cubic-bezier(.2,.7,.2,1)}
-.js .hero-txt>*:nth-child(2){animation-delay:.1s}.js .hero-txt>*:nth-child(3){animation-delay:.2s}.js .hero-txt>*:nth-child(4){animation-delay:.3s}.js .hero-txt>*:nth-child(5){animation-delay:.4s}
-@keyframes sube{from{opacity:0;transform:translateY(24px)}}
-.foto{position:relative;width:100%;max-width:400px;justify-self:center}
-.foto::before{content:"";position:absolute;inset:-16px -16px 16px 16px;border-radius:160px 160px 24px 24px;background:var(--gold);opacity:.3}
-.foto img.ph{position:relative;width:100%;aspect-ratio:4/4.8;max-height:480px;object-fit:cover;border-radius:160px 160px 24px 24px;box-shadow:0 22px 50px rgba(58,36,26,.28);transform:translateY(var(--py,0px));will-change:transform;background:var(--tan)}
-.sello{position:absolute;z-index:2;right:-10px;top:-6px;width:104px;height:104px;border-radius:50%;background:var(--brown);color:#fff;display:grid;place-items:center;border:3px solid #fff;box-shadow:0 10px 24px rgba(0,0,0,.2)}
-.sello svg{position:absolute;inset:0;width:100%;height:100%;animation:gira 22s linear infinite}
-.sello text{font:700 10px Montserrat,sans-serif;letter-spacing:.12em;text-transform:uppercase;fill:#fff}
-.sello b{font-family:Sacramento,cursive;font-weight:400;font-size:2.4rem;line-height:1}
-@keyframes gira{to{transform:rotate(360deg)}}
-.datos{position:relative;z-index:2;margin-top:-52px}
-.datos ul{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.datos li{background:#fff;border:1px solid var(--line);border-top:4px solid var(--gold);border-radius:var(--r);padding:16px 14px;text-align:center;box-shadow:0 12px 28px rgba(58,36,26,.14)}
-.datos li:nth-child(even){border-top-color:var(--wine)}
-.datos small{display:block;font-family:Sacramento,cursive;font-size:1.6rem;line-height:1;color:var(--gold)}
-.datos b{display:block;margin-top:2px;font-size:.88rem;line-height:1.35;color:var(--brown-x)}
-.sec-title{display:flex;align-items:center;justify-content:center;gap:14px;text-align:center;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--wine);font-size:1.05rem;margin-bottom:26px}
-.sec-title::before,.sec-title::after{content:"";height:1px;width:48px;background:var(--gold)}
-.about{padding:72px 0 8px;text-align:center}
-.about .big{font-size:3.4rem;line-height:1;color:var(--brown)}
-.about .lead{max-width:520px;margin:8px auto 30px}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.card{background:var(--soft);border:1px solid var(--line);border-radius:var(--r);padding:26px 22px;text-align:center;transition:transform .25s,box-shadow .25s}
-.card:hover{transform:translateY(-5px);box-shadow:0 14px 30px rgba(58,36,26,.18)}
-.card .ic{font-size:2rem}
-.card h3{font-size:.95rem;letter-spacing:.06em;text-transform:uppercase;color:var(--brown);margin:4px 0 6px}
-.card p{font-size:.88rem}.card b{display:block;margin-top:10px;color:var(--gold);font-size:1.2rem}
-.feat{padding:56px 0 8px}
-.cinta{overflow:hidden;padding:44px 0 8px}
-.cinta-in{margin:0 -4%;transform:rotate(-1.4deg);background:var(--brown);color:#fff;padding:14px 0;overflow:hidden}
-.cinta-t{display:flex;width:max-content;white-space:nowrap;animation:cinta 36s linear infinite}
-.cinta-t span{font-size:.82rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;padding:0 18px}
-.cinta-t i{font-style:normal;color:var(--gold)}
-@keyframes cinta{to{transform:translateX(-50%)}}
-.menu{padding:56px 0 40px}
-.chips{position:sticky;top:62px;z-index:40;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);display:flex;gap:8px;overflow-x:auto;padding:10px 22px;scrollbar-width:none;justify-content:safe center}
-.chips::-webkit-scrollbar{display:none}
-.chips button{flex:none;font:inherit;font-size:.8rem;font-weight:600;min-height:40px;padding:8px 16px;border-radius:99px;border:0;background:var(--soft);color:var(--ink);cursor:pointer;transition:background .2s,color .2s,transform .15s}
-.chips button:active{transform:scale(.94)}
-.chips button[aria-pressed="true"]{background:var(--brown);color:#fff}
-#menu{background:#fff;border:1px solid var(--line);border-radius:28px;box-shadow:0 14px 44px rgba(58,36,26,.12);padding:8px 32px 34px;margin-top:22px}
-.msec{display:none;padding-top:28px}.msec.on{display:block;animation:sube .5s both}
-.msec h2{display:flex;align-items:center;justify-content:center;gap:14px;font-size:1.1rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--wine);text-align:center}
-.msec h2::before,.msec h2::after{content:"";height:1px;width:36px;background:var(--gold)}
-.note{text-align:center;font-size:.82rem;font-style:italic;margin:12px auto 0;max-width:560px;color:#7a6354}
-.list{display:grid;grid-template-columns:1fr 1fr;gap:4px 48px;margin-top:22px}
-.it{padding:8px 10px;border-radius:10px;transition:background .2s}.it:hover{background:var(--soft)}
-.it .row{display:flex;align-items:baseline;gap:8px}
-.it .n{font-weight:600;font-size:.92rem}
-.it .dots{flex:1;min-width:12px;border-bottom:2px dotted var(--gold);transform:translateY(-4px)}
-.it .p{font-weight:700;color:var(--wine);white-space:nowrap;font-size:.92rem}
-.it .d{font-size:.78rem;color:#7a6354;font-style:italic;margin-top:1px}
-.aviso{text-align:center;font-size:.8rem;color:#7a6354;margin-top:18px}
-.rese{background:var(--soft);padding:64px 0 56px;margin-top:40px;text-align:center}
-.rese .eyebrow{display:block;font-family:Sacramento,cursive;font-size:2.2rem;line-height:1;color:var(--gold);margin-bottom:4px}
-.res-head{display:flex;flex-direction:column;align-items:center;gap:14px;margin-bottom:26px}
-.res-head .sec-title{margin-bottom:0}
-.res-nota{display:flex;align-items:center;justify-content:center;gap:16px;text-align:left}
-.res-nota[hidden]{display:none}
-.res-nota .num{font-weight:700;font-size:4rem;line-height:1;color:var(--brown)}
-.estrellas{background:linear-gradient(100deg,#e0a43a 0%,#f7d27a 45%,#e0a43a 90%);background-size:220% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:#e0a43a;letter-spacing:2px;line-height:1;animation:brillo 4.5s ease-in-out infinite}
-@keyframes brillo{0%,100%{background-position:100% 0}50%{background-position:0 0}}
-.res-nota .estrellas{font-size:1.3rem}
-.res-nota small{display:block;color:#7a6354;font-size:.95rem;margin-top:4px}
-.tags{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-bottom:30px}
-.tags span{background:#fff;border:2px solid var(--gold);color:var(--wine);font-weight:700;font-size:.88rem;border-radius:99px;padding:5px 14px}
-.res-lista{display:grid;grid-template-columns:repeat(6,1fr);gap:20px;text-align:center}
-.res{position:relative;grid-column:span 2;background:#fff;border:2px solid var(--brown);border-radius:var(--r);padding:24px;display:flex;flex-direction:column;gap:14px;transition:transform .25s,box-shadow .25s}
-.res:nth-child(n+4){grid-column:span 3}
-.res:nth-child(even){border-color:var(--wine)}
-.res:hover{transform:translateY(-4px);box-shadow:0 14px 28px rgba(58,36,26,.16)}
-.res::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .3s;background:radial-gradient(260px circle at var(--mx,50%) var(--my,50%),rgba(201,143,90,.28),transparent 65%)}
-.res.glow:hover::before,.res.glow.toca::before{opacity:1}
-.res .estrellas{font-size:1.1rem}
-.res blockquote{flex:1;font-size:.95rem;line-height:1.6}
-.res figcaption{display:flex;flex-direction:column;align-items:center;border-top:1px dashed #cfc0a6;padding-top:12px;font-size:.95rem}
-.res figcaption b{color:var(--brown);font-size:1rem}
-.res figcaption span{color:#7a6354;font-size:.85rem}
-.hint{display:none;font-size:.85rem;color:#7a6354;margin-top:4px}
-.res-botones{margin-top:30px}
-.visit{padding:40px 0 70px}
-.vpanel{background:var(--brown-x);color:#fff;border-radius:36px;padding:56px 28px;text-align:center}
-.vpanel .te{color:#f1c48f;font-size:2.4rem;line-height:1;display:block}
-.vpanel h2{font-size:clamp(1.9rem,5vw,2.6rem);margin-top:4px}
-.vpanel .ul{display:block;width:64px;height:3px;background:#f1c48f;border-radius:3px;margin:12px auto 34px}
-.vcols{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
-.vinfo h3{font-size:1.25rem}.vinfo p{opacity:.9;margin-bottom:18px}
-.vinfo table{width:100%;max-width:360px;margin:0 auto 24px;border-collapse:collapse}
-.vinfo td{padding:10px 0;border-bottom:1px solid rgba(255,255,255,.3);vertical-align:top}.vinfo td:last-child{text-align:right}
-.vinfo tr.hoy td{font-weight:700;color:#f1c48f}
-.vb{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
-.vb a{padding:11px 22px;border-radius:99px;border:2px solid #fff;font-weight:600;font-size:.88rem;transition:background .2s,transform .15s}
-.vb a:hover{background:rgba(255,255,255,.18)}.vb a:active{transform:scale(.96)}
-.vb a.f{background:var(--soft);color:var(--brown-x);border-color:var(--soft)}.vb a.f:hover{background:#fff}
-iframe{display:block;width:100%;height:340px;border:6px solid var(--gold);border-radius:26px;box-shadow:0 10px 30px rgba(0,0,0,.2);background:#fff}
-footer{background:var(--brown-x);color:#e4d6c0;padding:44px 0 36px;text-align:center;font-size:.9rem}
-footer .wrap{display:flex;flex-direction:column;align-items:center;gap:14px}
-.frow{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;color:#fff}
-.logo{background:var(--soft);border-radius:18px;padding:6px 16px;display:inline-flex}.logo img{width:58px;height:58px;border-radius:50%;object-fit:cover}
-.fig{color:#fff;text-decoration:underline;font-weight:500}
-.copy{color:#c9b59d;font-size:.82rem}
-.creditos a{display:inline-flex;align-items:center;gap:4px;color:#f1c48f;font-weight:700;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px;transition:color .2s,transform .2s}
-.creditos a svg{transition:transform .2s}.creditos a:hover{color:#fff}.creditos a:hover svg{transform:translate(2px,-2px)}.creditos a:active{transform:scale(.96)}
-.wa{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:45;width:58px;height:58px;border-radius:50%;background:#25d366;display:none;align-items:center;justify-content:center;box-shadow:0 8px 22px rgba(37,211,102,.45);transition:transform .2s}
-.wa:hover{transform:scale(1.08)}.wa svg{width:30px;height:30px;fill:#fff}
-.subir{position:fixed;right:19px;bottom:calc(86px + env(safe-area-inset-bottom,0px));z-index:44;width:52px;height:52px;border-radius:50%;border:0;background:#fff;color:var(--brown);display:grid;place-items:center;cursor:pointer;box-shadow:0 8px 22px rgba(58,36,26,.25);opacity:0;transform:translateY(24px) scale(.5);pointer-events:none;transition:opacity .3s,transform .5s cubic-bezier(.34,1.56,.64,1),background .25s,color .25s;-webkit-tap-highlight-color:transparent}
-.subir.ver{opacity:1;transform:none;pointer-events:auto}
-.subir .anillo{position:absolute;inset:0;width:100%;height:100%;transform:rotate(-90deg)}
-.subir circle{fill:none;stroke-width:3}.subir .pista{stroke:var(--line)}
-.subir .valor{stroke:var(--wine);stroke-linecap:round;stroke-dasharray:132;stroke-dashoffset:132}
-.subir .flecha{position:relative}
-.subir:hover{background:var(--brown);color:#fff;transform:translateY(-3px) scale(1.06)}
-.subir:hover .flecha{animation:flecha .9s ease-in-out infinite}
-.subir:active{transform:scale(.9)}
-.subir.va .flecha{animation:flechaYa .6s ease-in}
-@keyframes flecha{0%,100%{transform:none;opacity:1}45%{transform:translateY(-14px);opacity:0}46%{transform:translateY(14px);opacity:0}}
-@keyframes flechaYa{to{transform:translateY(-34px);opacity:0}}
-.js .rv{opacity:0;transform:translateY(20px);transition:opacity .7s,transform .7s}.js .rv.in{opacity:1;transform:none}
-.js .card.rv.in:hover,.js .res.rv.in:hover{transform:translateY(-5px)}
-.js .res.rv{transition:opacity .7s,transform .25s,box-shadow .25s}
-@media(max-width:860px){.datos ul{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:860px) and (min-width:761px){.res,.res:nth-child(n+4){grid-column:span 3}.res:last-child:nth-child(odd){grid-column:span 6}}
-@media(max-width:760px){
- body{font-size:16px}.wrap{padding:0 18px}
- header.top .wrap{flex-direction:column;gap:0;padding-top:8px;padding-bottom:0}
- .brand{font-size:1.7rem}.brand img{width:32px;height:32px}
- nav{width:100%;justify-content:space-between;gap:0;font-size:clamp(.7rem,3.4vw,.84rem)}
- nav a{padding:12px 6px 13px}nav a::after{left:6px;right:6px;bottom:0;height:4px}
- nav .navwa{display:none!important}
- .chips{top:84px;padding:10px 18px;justify-content:flex-start}
- .hero{padding:30px 0 84px;border-radius:0 0 32px 32px}
- .hero-grid{grid-template-columns:1fr;gap:34px;text-align:center}
- .hero p.lead{margin-inline:auto}.cta,.estado{justify-content:center}
- .foto{max-width:240px;margin:0 auto}.foto::before{inset:-12px -8px 12px 8px}
- .sello{width:72px;height:72px;right:-10px;top:-12px}.sello b{font-size:1.7rem}
- .datos{margin-top:-46px}.datos ul{gap:10px}.datos li{padding:12px 8px}
- .cards{grid-template-columns:1fr}.about{padding-top:56px}
- #menu{padding:4px 16px 26px;border-radius:22px}
- .list{grid-template-columns:1fr}
- .res-lista{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;margin:0 -18px;padding:6px 18px 14px;scroll-padding:0 18px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
- .res-lista::-webkit-scrollbar{display:none}
- .res,.res:nth-child(n+4){flex:0 0 84%;grid-column:auto;scroll-snap-align:start;padding:20px}
- .hint{display:block}
- .res-botones{margin-top:14px}
- .res-nota .num{font-size:3.2rem}
- .rese{padding:48px 0 40px}
- .vcols{grid-template-columns:1fr}.vpanel{padding:44px 18px;border-radius:28px}
- .vb a{width:100%;text-align:center}
- iframe{height:270px}footer{padding-bottom:96px}.subir{right:18px}
+.hero{padding:34px 0 70px}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:center}
+.estado{display:inline-flex;align-items:center;gap:9px;background:var(--card);border-radius:99px;padding:8px 16px;font-size:.86rem;font-weight:600;margin-bottom:22px}
+.estado i{width:10px;height:10px;border-radius:50%;background:#3fae72;flex:none}
+.estado.pronto i{background:var(--car)}.estado.cerrado i{background:var(--tomate)}
+.hero h1{font-weight:800;font-size:clamp(3.3rem,9.6vw,7rem);letter-spacing:-.04em;line-height:.9}
+.hero h1 em{font-style:normal;color:var(--tomate);display:block}
+.lead{max-width:430px;margin:22px 0 28px;font-size:1.12rem;color:var(--mut)}
+.taza{position:relative;max-width:420px;justify-self:center;width:100%}
+.taza svg{width:100%;height:auto;display:block}
+.vapor{fill:none;stroke:#fff8ea;stroke-width:7;stroke-linecap:round;animation:vapor 3.2s ease-in-out infinite}
+.vapor:nth-of-type(2){animation-delay:.9s}.vapor:nth-of-type(3){animation-delay:1.8s}
+@keyframes vapor{0%{opacity:0;transform:translateY(14px)}40%{opacity:.95}100%{opacity:0;transform:translateY(-22px)}}
+.sticker{position:absolute;left:-6px;bottom:30px;background:var(--pist);color:var(--esp);font-family:var(--disp);font-weight:800;font-size:1.05rem;line-height:1.05;padding:16px 18px;border-radius:50%;width:106px;height:106px;display:grid;place-items:center;text-align:center;transform:rotate(-12deg);border:3px solid var(--esp)}
+.datos{display:grid;grid-template-columns:repeat(4,1fr);background:var(--card);border-radius:26px;margin:0 auto;max-width:1032px}
+.datos div{padding:20px 22px;border-left:2px dashed rgba(122,95,80,.35)}.datos div:first-child{border:0}
+.datos small{display:block;color:var(--tomate);font-weight:600;font-size:.82rem;margin-bottom:2px}
+.datos b{font-weight:600;line-height:1.35;display:block}
+.about{padding:80px 0 20px}
+.about h2{font-weight:800;font-size:clamp(2rem,5vw,3.4rem);letter-spacing:-.03em;max-width:760px;margin-bottom:34px}
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.trio div{background:var(--card);border-radius:24px;padding:26px 24px}
+.trio h3{font-size:1.3rem;margin-bottom:8px;font-weight:700}
+.trio p{margin:0;color:var(--mut);font-size:.95rem}
+.probar{padding:60px 0 10px}
+.probar h2{font-weight:800;font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:22px;letter-spacing:-.02em}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.tile{border-radius:28px;padding:28px 26px;min-height:230px;display:flex;flex-direction:column;color:var(--esp)}
+.tile:nth-child(1){background:var(--car)}.tile:nth-child(2){background:var(--pist)}.tile:nth-child(3){background:#e9c9a0}
+.tile h3{font-weight:800;font-size:1.5rem;margin-bottom:8px}
+.tile p{margin:0;flex:1;font-size:.95rem}
+.tile b{font-family:var(--disp);font-weight:800;font-size:2.1rem;letter-spacing:-.02em}
+.carta{padding:70px 0 20px}
+.board{background:var(--esp);color:var(--crema);border-radius:34px;padding:42px 36px 36px}
+.board h2{font-weight:800;font-size:clamp(2.2rem,6vw,3.6rem);letter-spacing:-.03em}
+.board .sub{margin:8px 0 24px;color:#d6c0a6}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:26px}
+.tabs button{font:inherit;font-weight:600;font-size:.9rem;min-height:44px;padding:9px 18px;border-radius:99px;border:2px solid #6b4a3a;background:transparent;color:var(--crema);cursor:pointer;transition:background .2s,color .2s,transform .15s}
+.tabs button:hover{border-color:var(--car)}
+.tabs button:active{transform:scale(.95)}
+.tabs button[aria-pressed="true"]{background:var(--car);border-color:var(--car);color:var(--esp)}
+.list{display:grid;grid-template-columns:1fr 1fr;gap:0 56px}
+.sec.on{animation:fade .35s both}
+@keyframes fade{from{opacity:0;transform:translateY(10px)}}
+.it{padding:12px 0;border-bottom:1px solid rgba(246,234,211,.14)}
+.it .row{display:flex;align-items:baseline;gap:10px}
+.it .n{font-weight:600}
+.it .dots{flex:1;min-width:14px;border-bottom:2px dotted #8a6a58;transform:translateY(-4px)}
+.it .p{font-family:var(--disp);font-weight:700;color:var(--car);white-space:nowrap;font-size:1.05rem}
+.it .d{font-size:.84rem;color:#cdb79f;margin-top:2px}
+.aviso{margin:20px 0 0;color:#cdb79f;font-size:.84rem}
+.rese{padding:80px 0 20px}
+.rese h2{font-weight:800;font-size:clamp(2rem,5vw,3.2rem);letter-spacing:-.03em;margin-bottom:28px}
+.burbujas{display:grid;grid-template-columns:repeat(2,1fr);gap:22px 20px}
+.bub{position:relative;background:var(--card);border-radius:26px 26px 26px 6px;padding:24px 24px 20px}
+.bub:nth-child(even){border-radius:26px 26px 6px 26px;background:var(--pist);color:var(--esp)}
+.bub:first-child{grid-column:span 2;background:var(--car);color:var(--esp)}
+.bub:first-child blockquote{font-family:var(--disp);font-weight:700;font-size:clamp(1.3rem,3vw,1.9rem);line-height:1.2}
+.stars{color:#a86a12;letter-spacing:3px;margin-bottom:6px}
+.bub:nth-child(even) .stars,.bub:first-child .stars{color:var(--esp)}
+.bub blockquote{margin:0 0 12px}
+.bub figcaption{font-weight:600;font-size:.92rem}.bub figcaption span{font-weight:400;opacity:.75}
+.bub{margin:0}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin:26px 0 22px}
+.tags span{border:2px solid var(--car);border-radius:99px;padding:5px 15px;font-weight:600;font-size:.88rem}
+.visit{padding:70px 0 70px}
+.vp{background:var(--car);color:var(--esp);border-radius:34px;padding:44px 36px;display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.vp h2{font-weight:800;font-size:clamp(2.2rem,5.5vw,3.5rem);letter-spacing:-.03em;margin-bottom:14px}
+.vp p{margin:0 0 22px;font-size:1.05rem}
+.vp .btn.p{background:var(--esp);color:var(--crema)}.vp .btn.o{color:var(--esp);border-color:var(--esp)}.vp .btn.o:hover{background:var(--esp);color:var(--crema)}
+.vp table{width:100%;border-collapse:collapse;background:rgba(255,248,234,.35);border-radius:20px}
+.vp td{padding:14px 18px;border-bottom:1px solid rgba(43,26,20,.2)}.vp td:last-child{text-align:right}
+.vp tr:last-child td{border:0}
+.vp tr.hoy td{font-weight:700;background:var(--leche)}
+.vp tr.hoy td:first-child{border-radius:20px 0 0 20px}.vp tr.hoy td:last-child{border-radius:0 20px 20px 0}
+.vp .estado{background:var(--leche);margin-bottom:16px}
+footer{background:var(--esp);color:var(--crema);padding:28px 0 calc(28px + env(safe-area-inset-bottom,0px));font-size:.88rem}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px 24px}
+footer a{color:var(--car);font-weight:600}
+@media(max-width:820px){
+.wrap{padding:0 18px}
+nav a{padding:9px 8px;font-size:.82rem}nav .cta-n{display:none}
+.hero{padding:20px 0 48px}.hero .wrap{grid-template-columns:1fr;gap:26px}
+.taza{max-width:300px;order:-1}.sticker{width:88px;height:88px;font-size:.9rem;left:0}
+.datos{grid-template-columns:1fr 1fr;margin:0 18px}.datos div:nth-child(3){border-left:0}.datos div:nth-child(n+3){border-top:2px dashed rgba(122,95,80,.35)}
+.trio,.tiles{grid-template-columns:1fr}.tile{min-height:0;gap:6px}
+.board{padding:30px 18px 26px;border-radius:26px}
+.tabs{flex-wrap:nowrap;overflow-x:auto;margin:0 -18px 22px;padding:0 18px;scrollbar-width:none}.tabs::-webkit-scrollbar{display:none}.tabs button{flex:none}
+.list{grid-template-columns:1fr}
+.burbujas{grid-template-columns:1fr}.bub:first-child{grid-column:auto}
+.vp{grid-template-columns:1fr;padding:32px 20px;border-radius:26px;gap:26px}
+.mark{font-size:1.05rem}
 }
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.js .rv{opacity:1;transform:none}.progreso{display:none}.foto img.ph{transform:none}}
+@media(max-width:430px){nav a:nth-child(2){display:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
 </style>
 </head>
 <body>
-<a class="skip" href="#carta">Saltar a la carta</a>
-
-<header class="top"><div class="wrap">
- <a href="#top" class="brand script" aria-label="Alfonsina y el Mar, inicio"><img src="logo.png" alt="" width="40" height="40">Alfonsina y el Mar</a>
- <nav aria-label="Principal">
-  <a href="#nosotros">Nosotros</a><a href="#carta">Carta</a><a href="#resenas">Reseñas</a><a href="#visitanos">Visitanos</a>
-  <a class="navwa" id="navwa" target="_blank" rel="noopener" style="display:none">Escribinos</a>
- </nav>
+<header><div class="wrap">
+ <a class="mark" href="#top">Alfonsina y el Mar</a>
+ <nav aria-label="Principal"><a href="#nosotros">Nosotros</a><a href="#carta">Carta</a><a href="#resenas">Reseñas</a><a href="#visitanos">Visitanos</a></nav>
 </div></header>
 
 <main>
-<section class="hero" id="top"><div class="wrap hero-grid">
- <div class="hero-txt">
+<section class="hero" id="top"><div class="wrap">
+ <div>
   <div class="estado" id="estado"><i></i><span id="estado-txt">Café y libros en Murguiondo 1659</span></div>
-  <h1 class="script">Alfonsina y el Mar</h1>
-  <div class="sub">Café literario · Winery</div>
-  <p class="lead">Café de especialidad, pastelería y libros. Cada detalle es un lujo.</p>
-  <div class="cta"><a class="btn main" href="#carta">Ver la carta</a><a class="btn alt" id="mapBtn" href="#visitanos">Cómo llegar</a></div>
+  <h1>Alfonsina<em>y el Mar</em></h1>
+  <p class="lead">Café de especialidad, pastelería y libros. Pasá, pedí algo rico y quedate un rato.</p>
+  <div class="cta"><a class="btn p" href="#carta">Ver la carta</a><a class="btn o" id="mapBtn" target="_blank" rel="noopener">Cómo llegar</a></div>
  </div>
- <div class="foto">
-  <img class="ph" src="hero.jpg" alt="Café y porción de dulce de leche sobre una mesa en la vereda de Alfonsina y el Mar" width="1000" height="1000" fetchpriority="high">
-  <div class="sello" aria-hidden="true"><svg viewBox="0 0 120 120"><defs><path id="circ" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"/></defs><text><textPath href="#circ">Café y libros · Café y libros · </textPath></text></svg><b>A</b></div>
+ <div class="taza">
+  <svg viewBox="0 0 320 320" role="img" aria-label="Taza de café con leche con un corazón dibujado en la espuma">
+   <circle cx="160" cy="165" r="150" fill="#d98e3f"/>
+   <path class="vapor" d="M125 105C112 88 138 78 126 56"/><path class="vapor" d="M160 98C147 80 173 70 161 46"/><path class="vapor" d="M195 105C182 88 208 78 196 56"/>
+   <ellipse cx="160" cy="262" rx="112" ry="17" fill="#2b1a14" opacity=".18"/>
+   <ellipse cx="160" cy="252" rx="108" ry="18" fill="#fff8ea" stroke="#2b1a14" stroke-width="5"/>
+   <path d="M232 160C285 152 285 222 228 222" fill="none" stroke="#2b1a14" stroke-width="18" stroke-linecap="round"/>
+   <path d="M232 160C285 152 285 222 228 222" fill="none" stroke="#fff8ea" stroke-width="7" stroke-linecap="round"/>
+   <path d="M76 140H244V182C244 228 212 252 160 252C108 252 76 228 76 182Z" fill="#fff8ea" stroke="#2b1a14" stroke-width="5"/>
+   <ellipse cx="160" cy="140" rx="84" ry="20" fill="#fff8ea" stroke="#2b1a14" stroke-width="5"/>
+   <ellipse cx="160" cy="142" rx="71" ry="14" fill="#6b3b22"/>
+   <path d="M160 152C136 138 141 126 152 128C157 129 160 133 160 133C160 133 163 129 168 128C179 126 184 138 160 152Z" fill="#fff8ea"/>
+  </svg>
+  <div class="sticker">Café y libros</div>
  </div>
 </div></section>
 
-<div class="datos"><div class="wrap"><ul>
- <li class="rv"><small>Horario</small><b>Martes a viernes<br>10 a 13 y 16 a 21 hs</b></li>
- <li class="rv"><small>Dónde</small><b>Murguiondo 1659</b></li>
- <li class="rv"><small>Especialidad</small><b>Cuatro orígenes<br>a $4.500</b></li>
- <li class="rv"><small>Sin TACC</small><b>Lemonie, alfajor cookie<br>y brownie</b></li>
-</ul></div></div>
+<div class="wrap"><div class="datos">
+ <div><small>Horario</small><b>Martes a viernes<br>10 a 13 y 16 a 21 hs</b></div>
+ <div><small>Dónde</small><b>Murguiondo 1659</b></div>
+ <div><small>Especialidad</small><b>Cuatro orígenes<br>a $4.500</b></div>
+ <div><small>Sin TACC</small><b>Lemonie, alfajor cookie y brownie</b></div>
+</div></div>
 
 <section class="about" id="nosotros"><div class="wrap">
- <div class="script big rv">Café y libros</div>
- <p class="lead rv">Pasá a tomar un café de especialidad, comer algo rico y quedarte un rato.</p>
- <div class="cards">
-  <div class="card rv"><div class="ic">☕</div><h3>Café</h3><p>Del filtrado al flat white, y café de especialidad de Etiopía, Nicaragua, Costa Rica y Colombia.</p></div>
-  <div class="card rv"><div class="ic">🥐</div><h3>Para acompañar</h3><p>Medialunas, croissants, tostados, cookies, brownies y budín.</p></div>
-  <div class="card rv"><div class="ic">🌾</div><h3>Sin TACC</h3><p>Lemonie, alfajor cookie y brownie sin TACC.</p></div>
- </div>
- <p style="margin-top:26px"><a class="btn main" id="igBtn" target="_blank" rel="noopener" style="display:none">Seguinos en Instagram</a></p>
-</div></section>
-
-<section class="feat"><div class="wrap">
- <div class="sec-title rv">Para probar</div>
- <div class="cards">
-  <div class="card rv"><h3>Cookie cup</h3><p>Una cookie en formato taza para acompañar tu café.</p><b>$7.000</b></div>
-  <div class="card rv"><h3>Latte saborizado</h3><p>Frío o caliente, con pistacho, dulce de leche, vainilla, caramelo o chocolate.</p><b>$8.500</b></div>
-  <div class="card rv"><h3>Tostadas</h3><p>Con dos dips a elección: manteca, queso crema, mermelada, dulce de leche o palta.</p><b>$7.500</b></div>
+ <h2>Pasá a tomar un café, comer algo rico y quedarte un rato.</h2>
+ <div class="trio">
+  <div><h3>Café</h3><p>Del filtrado al flat white, y café de especialidad de Etiopía, Nicaragua, Costa Rica y Colombia.</p></div>
+  <div><h3>Para acompañar</h3><p>Medialunas, croissants, tostados, cookies, brownies y budín.</p></div>
+  <div><h3>Sin TACC</h3><p>Lemonie, alfajor cookie y brownie sin TACC.</p></div>
  </div>
 </div></section>
 
-<div class="cinta" aria-hidden="true"><div class="cinta-in"><div class="cinta-t" id="cinta"></div></div></div>
-
-<section class="menu" id="carta">
- <div class="wrap"><div class="sec-title rv">Carta</div></div>
- <div class="chips" id="chips" role="group" aria-label="Categorías de la carta"></div>
- <div class="wrap"><div id="menu"></div>
-  <p class="aviso">Los precios pueden cambiar sin previo aviso.</p>
+<section class="probar"><div class="wrap">
+ <h2>Para probar</h2>
+ <div class="tiles">
+  <div class="tile"><h3>Cookie cup</h3><p>Una cookie en formato taza para acompañar tu café.</p><b>$7.000</b></div>
+  <div class="tile"><h3>Latte saborizado</h3><p>Frío o caliente, con pistacho, dulce de leche, vainilla, caramelo o chocolate.</p><b>$8.500</b></div>
+  <div class="tile"><h3>Tostadas</h3><p>Con dos dips a elección: manteca, queso crema, mermelada, dulce de leche o palta.</p><b>$7.500</b></div>
  </div>
-</section>
+</div></section>
+
+<section class="carta" id="carta"><div class="wrap"><div class="board">
+ <h2>La carta</h2>
+ <p class="sub">Elegí una categoría.</p>
+ <div class="tabs" id="tabs" role="group" aria-label="Categorías de la carta"></div>
+ <div id="menu" aria-live="polite"></div>
+ <p class="aviso">Los precios pueden cambiar sin previo aviso.</p>
+</div></div></section>
 
 <section class="rese" id="resenas"><div class="wrap">
- <div class="res-head">
-  <div><span class="eyebrow rv">Opinan los que vinieron</span><h2 class="sec-title rv">Lo que dicen de nosotros</h2></div>
-  <div class="res-nota rv" id="resnota" hidden><span class="num" id="resnum"></span><div><div class="estrellas" role="img" aria-label="Puntaje en Google">★★★★★</div><small id="rescant"></small></div></div>
+ <h2>Lo que dicen de nosotros</h2>
+ <div class="burbujas">
+  <figure class="bub"><div class="stars" role="img" aria-label="5 de 5 estrellas">★★★★★</div><blockquote>“Espectacular. La atención, la decoración y los productos ofrecidos. Imperdibles el carrot cake y el latte. Único en Mataderos.”</blockquote><figcaption>maria laura budetta <span>· Reseña en Google</span></figcaption></figure>
+  <figure class="bub"><div class="stars" role="img" aria-label="5 de 5 estrellas">★★★★★</div><blockquote>Se nota que todo está hecho con mucho amor y dedicación. El ambiente es hermoso y las personas que lo atienden también. Muy rico todo.</blockquote><figcaption>Einat Irigaray <span>· Reseña en Google</span></figcaption></figure>
+  <figure class="bub"><div class="stars" role="img" aria-label="5 de 5 estrellas">★★★★★</div><blockquote>El lugar es bellísimo y me contaron que tenés la opción de llevarte un libro a tu casa y devolverlo como en una biblioteca, lo que me pareció una muy linda idea. Las cookies muy ricas. Voy a volver 🙌🏽</blockquote><figcaption>Romina Eva Del Valle Gonzalez <span>· Reseña en Google</span></figcaption></figure>
+  <figure class="bub"><div class="stars" role="img" aria-label="5 de 5 estrellas">★★★★★</div><blockquote>Hermoso y cálido lugar. La atención increíble, todo riquísimo y accesible. Libros variados, hermoso para compartir momentos de lectura.</blockquote><figcaption>Paola Spina <span>· Reseña en Google</span></figcaption></figure>
+  <figure class="bub"><div class="stars" role="img" aria-label="5 de 5 estrellas">★★★★★</div><blockquote>Excelente atención, excelente lugar, excelente café, excelente pastelería.</blockquote><figcaption>Mariano Blasco <span>· Local Guide</span></figcaption></figure>
  </div>
- <div class="tags rv" aria-label="Lo que más destacan los clientes"><span>Atención amable</span><span>Ambiente cálido</span><span>Libros para leer o llevar</span><span>Opciones sin TACC</span></div>
- <div class="res-lista">
-  <figure class="res rv"><div class="estrellas" role="img" aria-label="5 de 5 estrellas">★★★★★</div><blockquote><p>Se nota que todo está hecho con mucho amor y dedicación. El ambiente es hermoso y las personas que lo atienden también. Muy rico todo.</p></blockquote><figcaption><b>Einat Irigaray</b><span>Reseña en Google</span></figcaption></figure>
-  <figure class="res rv"><div class="estrellas" role="img" aria-label="5 de 5 estrellas">★★★★★</div><blockquote><p>Espectacular. La atención, la decoración y los productos ofrecidos. Imperdibles el carrot cake y el latte. Único en Mataderos.</p></blockquote><figcaption><b>maria laura budetta</b><span>Reseña en Google</span></figcaption></figure>
-  <figure class="res rv"><div class="estrellas" role="img" aria-label="5 de 5 estrellas">★★★★★</div><blockquote><p>El lugar es bellísimo y me contaron que tenés la opción de llevarte un libro a tu casa y devolverlo como en una biblioteca, lo que me pareció una muy linda idea. Las cookies muy ricas. Voy a volver 🙌🏽</p></blockquote><figcaption><b>Romina Eva Del Valle Gonzalez</b><span>Reseña en Google</span></figcaption></figure>
-  <figure class="res rv"><div class="estrellas" role="img" aria-label="5 de 5 estrellas">★★★★★</div><blockquote><p>Hermoso y cálido lugar. La atención increíble, todo riquísimo y accesible. Libros variados, hermoso para compartir momentos de lectura.</p></blockquote><figcaption><b>Paola Spina</b><span>Reseña en Google</span></figcaption></figure>
-  <figure class="res rv"><div class="estrellas" role="img" aria-label="5 de 5 estrellas">★★★★★</div><blockquote><p>Excelente atención, excelente lugar, excelente café, excelente pastelería.</p></blockquote><figcaption><b>Mariano Blasco</b><span>Local Guide</span></figcaption></figure>
- </div>
- <p class="hint">Deslizá para ver más →</p>
- <p class="res-botones"><a class="btn alt" id="revBtn" target="_blank" rel="noopener">Ver todas las reseñas en Google</a></p>
+ <div class="tags" aria-label="Lo que más destacan los clientes"><span>Atención amable</span><span>Ambiente cálido</span><span>Libros para leer o llevar</span><span>Opciones sin TACC</span></div>
+ <a class="btn o" id="revBtn" target="_blank" rel="noopener">Ver todas las reseñas en Google</a>
 </div></section>
 
-<section class="visit" id="visitanos"><div class="wrap"><div class="vpanel">
- <span class="script te">Te esperamos</span>
- <h2>Pasá por Alfonsina</h2><span class="ul"></span>
- <div class="vcols"><div class="vinfo" id="vinfo"></div><div id="mapbox"></div></div>
+<section class="visit" id="visitanos"><div class="wrap"><div class="vp">
+ <div>
+  <h2>Pasá por Alfonsina</h2>
+  <p>Murguiondo 1659, Buenos Aires.<br>A metros de Alberdi.</p>
+  <div class="cta"><a class="btn p" id="mapBtn2" target="_blank" rel="noopener">Abrir en Google Maps</a><a class="btn o" id="igBtn" target="_blank" rel="noopener">Instagram</a></div>
+ </div>
+ <div>
+  <div class="estado" id="estado2"><i></i><span id="estado2-txt"></span></div>
+  <table id="horas"></table>
+ </div>
 </div></div></section>
 </main>
 
 <footer><div class="wrap">
- <div class="frow"><span class="logo"><img src="logo.png" alt="Alfonsina y el Mar" width="58" height="58"></span><span>Murguiondo 1659, Buenos Aires</span></div>
- <a id="fig" class="fig" target="_blank" rel="noopener"></a>
- <p class="copy">© 2026 Alfonsina y el Mar · Los precios pueden cambiar sin previo aviso.</p>
- <p class="copy creditos">Maqueta creada por <a href="https://wa.me/5491135679728?text=Hola%20Diego!%20Vi%20la%20maqueta%20de%20Alfonsina%20y%20el%20Mar" target="_blank" rel="noopener">Diego Zarrelli<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a></p>
+ <span>© 2026 Alfonsina y el Mar · Murguiondo 1659, Buenos Aires</span>
+ <a id="fig" target="_blank" rel="noopener"></a>
+ <span>Maqueta creada por <a href="https://wa.me/5491135679728?text=Hola%20Diego!%20Vi%20la%20maqueta%20de%20Alfonsina%20y%20el%20Mar" target="_blank" rel="noopener">Diego Zarrelli</a></span>
 </div></footer>
-
-<a class="wa" id="wa" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a>
-<button class="subir" id="subir" type="button" aria-label="Volver arriba"><svg class="anillo" viewBox="0 0 48 48" aria-hidden="true"><circle class="pista" cx="24" cy="24" r="21"/><circle class="valor" cx="24" cy="24" r="21"/></svg><svg class="flecha" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
 
 <script>
 (function(){
-document.documentElement.classList.add("js");
 var $=function(i){return document.getElementById(i)};
-// ✏️ Datos del local (lo que dejes vacío no se muestra)
-var INFO={address:"Murguiondo 1659, Buenos Aires",ref:"A metros de Alberdi",whatsapp:"",instagram:"alfonsina.coffee"};
-// Horarios por día (0 = domingo): tramos [abre, cierra]
+var INFO={address:"Murguiondo 1659, Buenos Aires",instagram:"alfonsina.coffee"};
 var H={0:[[16,21]],1:[[13,20]],2:[[10,13],[16,21]],3:[[10,13],[16,21]],4:[[10,13],[16,21]],5:[[10,13],[16,21]],6:[[11,21]]};
 var ROWS=[["Lunes",1],["Martes a viernes",2],["Sábados",6],["Domingos",0]];
-// Carta: "Nombre|Precio|Descripción (opcional)"
 var MENU=[
-{id:"cafe",c:"Café",t:"Café",i:["Café filtrado|$5.000","Café expreso doble|$4.000","Americano|$5.000","Café con leche|$5.500|Opción crema +$500","Flat white|$6.500|Café expreso acompañado de una medida de leche caliente","Capuchino|$7.300","Capuchino italiano|$8.300","Submarino|$7.300","Latte saborizado (frío o caliente)|$8.500|Pistacho, dulce de leche, vainilla, caramelo o chocolate","Irish coffee|$7.500|Puede ser con whisky o Baileys","Cookie cup|$7.000"]},
-{id:"esp",c:"Especialidad",t:"Café de especialidad",i:["Etiopía|$4.500|Con notas de pera","Nicaragua|$4.500|Con notas de pasas y malta, amaretto y cítricos","Costa Rica|$4.500|Con notas de almendra caramelizada y chocolate, acidez media","Colombia|$4.500|Orgánico, con notas de caramelo, frutos secos y chocolate amargo","Café turco|$4.000"]},
-{id:"inf",c:"Infusiones",t:"Infusiones",i:["Té turco|$5.000","Té en hebras|$5.000|Consultar sabores","Té en saquito a elección|$3.400"]},
-{id:"sal",c:"Salados",t:"Salados",i:["Medialuna de manteca|$2.500","Medialuna de manteca con JYQ|$3.500","Croissant|$3.500","Croissant con JYQ|$4.500","Tostado de miga|$5.200","Tostado pan ciabatta|$6.000","Chipá x2|$5.500","Sándwich en pan de chipá|$6.300","Scon de queso|$3.500","Tostadas|$7.500|Con dos dips a elección: manteca, queso crema, mermelada, dulce de leche o palta"]},
-{id:"dul",c:"Dulces",t:"Dulces",i:["Alfajores|$3.500","Mini cake|$8.500","Brownie con nuez|$4.000","Coco con dulce de leche|$4.000","Cookie|$2.500","Cookie XL|$5.500","Porción de budín|$6.300"]},
-{id:"tacc",c:"Sin TACC",t:"Sin TACC",i:["Lemonie|$10.000","Alfajor cookie|$10.000","Brownie|$10.000"]},
-{id:"beb",c:"Bebidas frías",t:"Bebidas frías",i:["Limonada con menta y jengibre|$4.000","Aguas saborizadas|$3.500","Gaseosas|$3.500","Agua mineral|$2.500","Licuados|$6.000"]}
+{id:"cafe",t:"Café",i:["Café filtrado|$5.000","Café expreso doble|$4.000","Americano|$5.000","Café con leche|$5.500|Opción crema +$500","Flat white|$6.500|Café expreso acompañado de una medida de leche caliente","Capuchino|$7.300","Capuchino italiano|$8.300","Submarino|$7.300","Latte saborizado (frío o caliente)|$8.500|Pistacho, dulce de leche, vainilla, caramelo o chocolate","Irish coffee|$7.500|Puede ser con whisky o Baileys","Cookie cup|$7.000"]},
+{id:"esp",t:"Especialidad",i:["Etiopía|$4.500|Con notas de pera","Nicaragua|$4.500|Con notas de pasas y malta, amaretto y cítricos","Costa Rica|$4.500|Con notas de almendra caramelizada y chocolate, acidez media","Colombia|$4.500|Orgánico, con notas de caramelo, frutos secos y chocolate amargo","Café turco|$4.000"]},
+{id:"inf",t:"Infusiones",i:["Té turco|$5.000","Té en hebras|$5.000|Consultar sabores","Té en saquito a elección|$3.400"]},
+{id:"sal",t:"Salados",i:["Medialuna de manteca|$2.500","Medialuna de manteca con JYQ|$3.500","Croissant|$3.500","Croissant con JYQ|$4.500","Tostado de miga|$5.200","Tostado pan ciabatta|$6.000","Chipá x2|$5.500","Sándwich en pan de chipá|$6.300","Scon de queso|$3.500","Tostadas|$7.500|Con dos dips a elección: manteca, queso crema, mermelada, dulce de leche o palta"]},
+{id:"dul",t:"Dulces",i:["Alfajores|$3.500","Mini cake|$8.500","Brownie con nuez|$4.000","Coco con dulce de leche|$4.000","Cookie|$2.500","Cookie XL|$5.500","Porción de budín|$6.300"]},
+{id:"tacc",t:"Sin TACC",i:["Lemonie|$10.000","Alfajor cookie|$10.000","Brownie|$10.000"]},
+{id:"beb",t:"Bebidas frías",i:["Limonada con menta y jengibre|$4.000","Aguas saborizadas|$3.500","Gaseosas|$3.500","Agua mineral|$2.500","Licuados|$6.000"]}
 ];
 var esc=function(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})};
 var DAYS=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
 
-// Carta
-$("menu").innerHTML=MENU.map(function(m){return '<div class="msec" id="m-'+m.id+'"><h2>'+esc(m.t)+'</h2>'+(m.n?'<p class="note">'+esc(m.n)+'</p>':"")+'<div class="list">'+m.i.map(function(x){var a=x.split("|");return '<div class="it"><div class="row"><span class="n">'+esc(a[0])+'</span><span class="dots"></span><span class="p">'+esc(a[1])+'</span></div>'+(a[2]?'<div class="d">'+esc(a[2])+'</div>':"")+'</div>'}).join("")+'</div></div>'}).join("");
-$("chips").innerHTML=MENU.map(function(m){return '<button type="button" data-id="'+m.id+'" aria-pressed="false">'+esc(m.c)+'</button>'}).join("");
-var tabs=[].slice.call(document.querySelectorAll("#chips button")),secs=[].slice.call(document.querySelectorAll(".msec"));
-function show(id,scroll){tabs.forEach(function(b){var on=b.dataset.id===id;b.setAttribute("aria-pressed",on);if(on&&scroll)b.scrollIntoView({inline:"center",block:"nearest",behavior:"smooth"})});secs.forEach(function(s){s.classList.toggle("on",s.id==="m-"+id)})}
+$("tabs").innerHTML=MENU.map(function(m){return '<button type="button" data-id="'+m.id+'" aria-pressed="false">'+esc(m.t)+'</button>'}).join("");
+var tabs=[].slice.call(document.querySelectorAll("#tabs button"));
+function show(id,scroll){
+ var m=MENU.filter(function(x){return x.id===id})[0];
+ $("menu").innerHTML='<div class="sec on"><div class="list">'+m.i.map(function(x){var a=x.split("|");return '<div class="it"><div class="row"><span class="n">'+esc(a[0])+'</span><span class="dots"></span><span class="p">'+esc(a[1])+'</span></div>'+(a[2]?'<div class="d">'+esc(a[2])+'</div>':"")+'</div>'}).join("")+'</div></div>';
+ tabs.forEach(function(b){var on=b.dataset.id===id;b.setAttribute("aria-pressed",on);if(on&&scroll)b.scrollIntoView({inline:"center",block:"nearest",behavior:"smooth"})});
+}
 tabs.forEach(function(b){b.addEventListener("click",function(){show(b.dataset.id,true)})});show("cafe");
 
-// Cinta
-var w=["Café","Libros","Especialidad","Pastelería"],h="";
-for(var k=0;k<8;k++)w.forEach(function(x){h+="<span>"+x+"</span><span><i>✦</i></span>"});
-$("cinta").innerHTML=h;
+var A=INFO.address,mp="https://www.google.com/maps/search/?api=1&query="+encodeURIComponent("Alfonsina y el Mar "+A);
+["mapBtn","mapBtn2","revBtn"].forEach(function(i){$(i).href=mp});
+var ig="https://instagram.com/"+INFO.instagram;$("igBtn").href=ig;$("fig").href=ig;$("fig").textContent="@"+INFO.instagram;
 
-// Visitanos
-var A=INFO.address,mp="https://www.google.com/maps/search/?api=1&query="+encodeURIComponent("Alfonsina y el Mar "+A),p=A.split(", ");
 var txt=function(d){return H[d].map(function(t){return t[0]+" a "+t[1]}).join(" y ")+" hs"};
 var hd=DAYS.indexOf(new Intl.DateTimeFormat("en-US",{timeZone:"America/Argentina/Buenos_Aires",weekday:"short"}).format(new Date())),gr=hd>=2&&hd<=5?2:hd;
-$("vinfo").innerHTML="<h3>"+esc(p[0])+"</h3><p>"+esc(INFO.ref)+"</p><table>"+ROWS.map(function(x){return"<tr"+(gr===x[1]?' class="hoy"':"")+"><td>"+x[0]+"</td><td>"+txt(x[1])+"</td></tr>"}).join("")+'</table><div class="vb"><a class="f" target="_blank" rel="noopener" href="'+mp+'">Cómo llegar</a>'+(INFO.whatsapp?'<a target="_blank" rel="noopener" href="https://wa.me/'+INFO.whatsapp+'">WhatsApp</a>':"")+'<a target="_blank" rel="noopener" href="https://instagram.com/'+INFO.instagram+'">Instagram</a></div>';
-$("mapbox").innerHTML='<iframe title="Mapa de Alfonsina y el Mar" loading="lazy" src="https://www.google.com/maps?q='+encodeURIComponent(A)+'&output=embed"></iframe>';
-$("mapBtn").href=mp;
-var g=$("fig");g.href="https://instagram.com/"+INFO.instagram;g.textContent="@"+INFO.instagram;var b=$("igBtn");b.href=g.href;b.style.display="inline-flex";
-if(INFO.whatsapp){var u="https://wa.me/"+INFO.whatsapp+"?text="+encodeURIComponent("Hola! Quiero hacer una consulta");$("wa").href=u;$("wa").style.display="flex";$("navwa").href=u;$("navwa").style.display="inline-flex"}
+$("horas").innerHTML=ROWS.map(function(x){return"<tr"+(gr===x[1]?' class="hoy"':"")+"><td>"+x[0]+"</td><td>"+txt(x[1])+"</td></tr>"}).join("");
 
-// Reseñas: nota general (✏️ completá con lo que muestra Google, ej "4,9" y "103". Vacío = no se muestra)
-var NOTA="",CANT="";
-if(NOTA){$("resnum").textContent=NOTA;$("rescant").textContent=CANT?CANT+" reseñas en Google":"Reseñas en Google";$("resnota").hidden=false}
-$("revBtn").href=mp;
-
-// Estado abierto / cerrado en vivo
 function dur(n){var a=Math.floor(n/60),m=n%60;return a?a+" h"+(m?" "+m+" min":""):m+" min"}
 function estado(){try{
  var f=new Intl.DateTimeFormat("en-US",{timeZone:"America/Argentina/Buenos_Aires",weekday:"short",hour:"numeric",minute:"numeric",hour12:false}).formatToParts(new Date()),
- g=function(t){return f.find(function(x){return x.type===t}).value},d=DAYS.indexOf(g("weekday")),m=(+g("hour")%24)*60+(+g("minute")),e=$("estado"),t=$("estado-txt"),cls="",x,cur=null,nx=null;
+ g=function(t){return f.find(function(x){return x.type===t}).value},d=DAYS.indexOf(g("weekday")),m=(+g("hour")%24)*60+(+g("minute")),cls="",x,cur=null,nx=null;
  H[d].forEach(function(s){if(m>=s[0]*60&&m<s[1]*60)cur=s;else if(m<s[0]*60&&!nx)nx=s});
  if(cur){var r=cur[1]*60-m;if(r<=60){cls="pronto";x="Cerramos pronto, en "+dur(r)}else x="Abierto ahora, hasta las "+cur[1]+" hs"}
  else{cls="cerrado";x=nx?"Abrimos hoy a las "+nx[0]+" hs":"Cerrado ahora. Mañana abrimos a las "+H[(d+1)%7][0][0]+" hs"}
- e.classList.toggle("pronto",cls==="pronto");e.classList.toggle("cerrado",cls==="cerrado");if(t.textContent!==x)t.textContent=x}catch(err){}}
-estado();setInterval(estado,30000);document.addEventListener("visibilitychange",function(){if(!document.hidden)estado()});
+ ["estado","estado2"].forEach(function(id){var e=$(id);e.classList.toggle("pronto",cls==="pronto");e.classList.toggle("cerrado",cls==="cerrado");$(id+"-txt").textContent=x})}catch(err){}}
+estado();setInterval(estado,30000);
 
-// Scroll: progreso, header, parallax, subir
-var reduce=window.matchMedia&&matchMedia("(prefers-reduced-motion:reduce)").matches,root=document.documentElement,
-bar=document.createElement("div"),head=document.querySelector("header.top"),foto=document.querySelector(".foto img"),sub=$("subir"),ring=sub.querySelector(".valor"),tick=false;
-bar.className="progreso";bar.setAttribute("aria-hidden","true");document.body.appendChild(bar);
-function onScroll(){var y=window.pageYOffset||root.scrollTop,hh=root.scrollHeight-window.innerHeight;
- bar.style.setProperty("--p",hh>0?Math.min(1,y/hh).toFixed(4):0);
- head.classList.toggle("scrolled",y>10);sub.classList.toggle("ver",y>500);ring.style.strokeDashoffset=(132*(1-(hh>0?Math.min(1,y/hh):0))).toFixed(1);
- if(foto&&!reduce&&y<900)foto.style.setProperty("--py",(-y*.06).toFixed(1)+"px");tick=false}
-window.addEventListener("scroll",function(){if(!tick){tick=true;requestAnimationFrame(onScroll)}},{passive:true});onScroll();
-sub.addEventListener("click",function(){sub.classList.add("va");setTimeout(function(){sub.classList.remove("va")},650);window.scrollTo({top:0,behavior:reduce?"auto":"smooth"})});
-
-// Reseñas: luz que sigue el cursor + contador de la nota
-[].slice.call(document.querySelectorAll(".res")).forEach(function(c){c.classList.add("glow");function mv(e){var r=c.getBoundingClientRect();c.style.setProperty("--mx",(e.clientX-r.left)+"px");c.style.setProperty("--my",(e.clientY-r.top)+"px")}c.addEventListener("pointermove",mv,{passive:true});c.addEventListener("pointerdown",function(e){mv(e);c.classList.add("toca")},{passive:true});["pointerup","pointercancel","pointerleave"].forEach(function(n){c.addEventListener(n,function(){c.classList.remove("toca")},{passive:true})})});
-var nn=$("resnum");
-if(NOTA&&nn&&"IntersectionObserver" in window&&!reduce){var fin=parseFloat(String(NOTA).replace(",","."));if(fin>0){var cio=new IntersectionObserver(function(en){if(!en[0].isIntersecting)return;cio.disconnect();var t0=null;function paso(t){if(!t0)t0=t;var k=Math.min(1,(t-t0)/1400),v=fin*(1-Math.pow(1-k,3));nn.textContent=v.toFixed(1).replace(".",",");if(k<1)requestAnimationFrame(paso)}requestAnimationFrame(paso)},{threshold:.6});nn.textContent="0,0";cio.observe(nn)}}
-
-// Reveal + sección activa en el menú
-var rv=document.querySelectorAll(".rv");
 if("IntersectionObserver" in window){
- var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target)}})},{threshold:.12});
- rv.forEach(function(el){io.observe(el)});
  var links={};document.querySelectorAll("nav a[href^='#']").forEach(function(a){links[a.getAttribute("href").slice(1)]=a});
  var so=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){Object.keys(links).forEach(function(k){links[k].classList.remove("act");links[k].removeAttribute("aria-current")});var a=links[x.target.id];if(a){a.classList.add("act");a.setAttribute("aria-current","true")}}})},{rootMargin:"-40% 0px -55% 0px"});
  Object.keys(links).forEach(function(k){var s=$(k);if(s)so.observe(s)});
-}else rv.forEach(function(el){el.classList.add("in")});
+}
 })();
 </script>
 </body>
